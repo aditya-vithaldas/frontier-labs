@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frontier Labs · Every industry needs its own frontier</title>
+<meta name="description" content="Frontier Labs experiments with cutting-edge technology and how it can be used in e-commerce and CRM.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<style>
+:root{--ground:#f4efe4;--surface:#fbf8f1;--ink:#141a33;--muted:#4d5270;--line:#d9d1bf;--accent:#b5401b;--yellow:#f2b632;--navy:#0d1433;--navy2:#141c45;
+--disp:'Fraunces',Georgia,serif;--text:'Inter Tight',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+/* nav */
+.nav{background:var(--navy);color:#f4efe4}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px}
+.brand{font-family:var(--disp);font-weight:600;font-size:24px;letter-spacing:-.02em;text-decoration:none}
+.links{display:flex;gap:8px}
+.links a{text-decoration:none;font-weight:600;font-size:15px;padding:10px 16px;border-radius:999px;border:1.5px solid rgba(244,239,228,.35);min-height:44px;display:inline-flex;align-items:center}
+.links a:hover{border-color:#f4efe4;background:rgba(244,239,228,.08)}
+.case-mode .nav{background:var(--ground);color:var(--ink);border-bottom:1px solid var(--line)}
+.case-mode .links a{border-color:var(--line)}
+/* banner */
+.banner{background:var(--navy);color:#f4efe4;padding:28px 0 96px;position:relative;overflow:hidden}
+.banner::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 15% 40%,rgba(47,95,179,.35),transparent 70%),radial-gradient(40% 50% at 85% 10%,rgba(242,182,50,.08),transparent 70%);pointer-events:none}
+.banner .wrap{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center}
+.art{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.7),0 0 0 1px rgba(244,239,228,.08)}
+.art video,.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;animation:drift 24s ease-in-out infinite alternate}
+@keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.07) translate(-1.2%,-.6%)}}
+.rain{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.rain i{position:absolute;width:1.2px;background:linear-gradient(transparent,#e8eef5);transform:rotate(-17deg);animation:fall 1s linear infinite}
+@keyframes fall{from{transform:translate(0,0) rotate(-17deg)}to{transform:translate(18vw,60vw) rotate(-17deg)}}
+.small{font-family:var(--disp);font-style:italic;font-size:clamp(20px,1.8vw,26px);color:#d8dcf0;margin:0 0 22px}
+.chain{font-family:var(--disp);font-weight:500;font-size:clamp(34px,3.6vw,54px);line-height:1.08;letter-spacing:-.025em;margin:0}
+.chain span{display:block}
+.chain span+span{margin-top:.18em}
+.hl{font-style:italic;color:var(--ink);background:var(--yellow);padding:0 .22em .04em;border-radius:.16em .45em .2em .38em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+/* what we do */
+.what{padding:96px 0 40px}
+.what p{font-family:var(--disp);font-size:clamp(26px,2.6vw,36px);line-height:1.3;letter-spacing:-.01em;margin:0;max-width:900px}
+.verts{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:56px;padding:56px 0 96px}
+.vert h2{font-family:var(--disp);font-weight:500;font-size:clamp(40px,4vw,56px);line-height:1;letter-spacing:-.03em;margin:0}
+.vert .sub{margin:14px 0 26px;color:var(--muted);font-size:19px;max-width:460px}
+.vert ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.xp{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"id t date" ". go go";gap:4px 16px;padding:18px 4px;border-bottom:1px solid var(--line);text-decoration:none;align-items:baseline;min-height:44px}
+.xp:hover .xp-t{color:var(--accent)}
+.xp-id{grid-area:id;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--accent)}
+.xp-t{grid-area:t;font-family:var(--disp);font-weight:600;font-size:21px;line-height:1.25;transition:color .2s}
+.xp time{grid-area:date;font-size:14px;color:var(--muted);white-space:nowrap}
+.xp-go{grid-area:go;font-size:15px;font-weight:700;color:var(--accent)}
+.inspired{border-top:1px solid var(--line);padding:56px 0 96px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:40px;align-items:start}
+.inspired .label{font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:8px 0 0}
+blockquote.twitter-tweet{margin:0;padding:24px 28px;border:1px solid var(--line);border-radius:16px;background:var(--surface);font-size:17px}
+blockquote.twitter-tweet a{font-weight:700;color:var(--accent);text-decoration:none}
+footer{border-top:1px solid var(--line);padding:32px 0 44px;font-size:15px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+/* case pages */
+.case-banner{height:280px;background:url(assets/hero/banner.jpg) center 30%/cover;position:relative}
+.case-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--ground) 0%,rgba(244,239,228,0) 70%)}
+.case-head{margin-top:-90px;position:relative;max-width:964px}
+.back{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--accent);text-decoration:none}
+.back:hover{text-decoration:underline;text-underline-offset:4px}
+.case-meta{display:flex;flex-wrap:wrap;gap:8px 16px;margin:18px 0 0;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.case-meta span:first-child{color:var(--accent)}
+.case h1{font-family:var(--disp);font-weight:500;font-size:clamp(40px,5vw,72px);line-height:1.02;letter-spacing:-.03em;margin:14px 0 0;max-width:16ch}
+.dek{font-family:var(--disp);font-size:clamp(21px,2vw,27px);line-height:1.4;color:var(--muted);margin:22px 0 0;max-width:740px}
+.case-body{padding-top:60px;padding-bottom:120px;max-width:964px}
+.block{padding:36px 0;border-top:1px solid var(--line)}
+.block h2{font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+.lead{font-family:var(--disp);font-size:25px;line-height:1.45;margin:0}
+.exs{display:grid;gap:26px}.ex h3{font-family:var(--disp);font-weight:600;font-size:23px;margin:0 0 6px}.ex p{margin:0;color:var(--muted)}
+.finds,.next{margin:0;padding-left:22px;display:grid;gap:12px}.finds li::marker{color:var(--accent)}
+.free p{margin:0}.note{margin-top:14px!important;font-size:15px;color:var(--muted)}.back.bottom{margin-top:28px}
+.rise{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.banner .wrap{grid-template-columns:1fr;gap:36px}.inspired{grid-template-columns:1fr}.verts{grid-template-columns:1fr}}
+@media (max-width:600px){.wrap{padding:0 20px}.brand{font-size:20px}.links a{padding:8px 12px;font-size:14px}.xp{grid-template-columns:auto 1fr;grid-template-areas:"id date" "t t" "go go"}.what{padding-top:64px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top">Frontier Labs</a>
+  <nav class="links" aria-label="Verticals"><a href="#ecommerce">E-commerce</a><a href="#crm">CRM</a></nav>
+</div></header>
+<main>
+<div class="view" data-view="home">
+  <section class="banner" id="top" aria-label="Thesis"><div class="wrap">
+    <figure class="art" style="margin:0">
+      <video autoplay muted loop playsinline preload="auto" poster="assets/hero/storm-poster.jpg" aria-label="Acrylic painting in motion: three sailors in yellow oilskins haul a rope on a storm-tossed deck">
+        <source src="assets/hero/storm.mp4" type="video/mp4">
+      </video>
+      <div class="rain" aria-hidden="true"><i style="left:8.3%;top:-89.7%;height:29px;animation-duration:0.79s;animation-delay:-0.09s;opacity:0.25"></i><i style="left:90.2%;top:-20.0%;height:39px;animation-duration:0.83s;animation-delay:-0.70s;opacity:0.22"></i><i style="left:0.7%;top:-89.4%;height:24px;animation-duration:1.26s;animation-delay:-1.08s;opacity:0.35"></i><i style="left:76.1%;top:-80.7%;height:27px;animation-duration:1.08s;animation-delay:-0.95s;opacity:0.36"></i><i style="left:85.6%;top:-91.3%;height:35px;animation-duration:1.10s;animation-delay:-0.66s;opacity:0.19"></i><i style="left:36.8%;top:-91.1%;height:44px;animation-duration:1.22s;animation-delay:-0.71s;opacity:0.23"></i><i style="left:89.1%;top:-42.8%;height:43px;animation-duration:1.21s;animation-delay:-0.66s;opacity:0.25"></i><i style="left:51.9%;top:-56.9%;height:23px;animation-duration:0.88s;animation-delay:-1.06s;opacity:0.16"></i><i style="left:-14.4%;top:-37.4%;height:26px;animation-duration:1.02s;animation-delay:-0.61s;opacity:0.24"></i><i style="left:99.7%;top:-80.4%;height:30px;animation-duration:0.82s;animation-delay:-0.82s;opacity:0.22"></i><i style="left:22.7%;top:-25.3%;height:27px;animation-duration:1.04s;animation-delay:-1.18s;opacity:0.18"></i><i style="left:-12.6%;top:-77.1%;height:39px;animation-duration:1.07s;animation-delay:-0.31s;opacity:0.23"></i><i style="left:1.3%;top:-54.1%;height:19px;animation-duration:1.12s;animation-delay:-1.16s;opacity:0.39"></i><i style="left:68.2%;top:-4.0%;height:19px;animation-duration:0.87s;animation-delay:-1.26s;opacity:0.34"></i><i style="left:29.3%;top:-5.7%;height:35px;animation-duration:1.19s;animation-delay:-0.38s;opacity:0.20"></i><i style="left:33.3%;top:-86.4%;height:29px;animation-duration:1.28s;animation-delay:-0.43s;opacity:0.15"></i><i style="left:-14.6%;top:-83.0%;height:40px;animation-duration:0.92s;animation-delay:-0.38s;opacity:0.17"></i><i style="left:97.8%;top:-57.6%;height:24px;animation-duration:0.74s;animation-delay:-0.07s;opacity:0.19"></i><i style="left:61.2%;top:-85.0%;height:19px;animation-duration:0.99s;animation-delay:-0.32s;opacity:0.40"></i><i style="left:-5.3%;top:-47.1%;height:40px;animation-duration:0.95s;animation-delay:-1.28s;opacity:0.27"></i><i style="left:9.0%;top:-58.9%;height:19px;animation-duration:0.95s;animation-delay:-0.32s;opacity:0.37"></i><i style="left:79.7%;top:-50.1%;height:19px;animation-duration:0.85s;animation-delay:-0.32s;opacity:0.20"></i><i style="left:7.8%;top:-13.0%;height:22px;animation-duration:0.73s;animation-delay:-1.21s;opacity:0.29"></i><i style="left:98.9%;top:-59.7%;height:43px;animation-duration:1.09s;animation-delay:-1.03s;opacity:0.34"></i><i style="left:39.3%;top:-90.7%;height:24px;animation-duration:1.22s;animation-delay:-1.17s;opacity:0.38"></i><i style="left:20.4%;top:-34.3%;height:40px;animation-duration:1.09s;animation-delay:-1.06s;opacity:0.28"></i><i style="left:58.6%;top:-31.4%;height:26px;animation-duration:1.25s;animation-delay:-1.24s;opacity:0.17"></i><i style="left:96.5%;top:-3.8%;height:37px;animation-duration:0.73s;animation-delay:-1.17s;opacity:0.18"></i><i style="left:96.2%;top:-33.3%;height:20px;animation-duration:0.80s;animation-delay:-0.83s;opacity:0.29"></i><i style="left:69.6%;top:-7.3%;height:24px;animation-duration:0.70s;animation-delay:-1.20s;opacity:0.15"></i><i style="left:85.2%;top:-88.4%;height:41px;animation-duration:1.17s;animation-delay:-1.14s;opacity:0.29"></i><i style="left:85.4%;top:-79.8%;height:37px;animation-duration:0.90s;animation-delay:-1.16s;opacity:0.34"></i><i style="left:36.6%;top:-47.4%;height:19px;animation-duration:0.72s;animation-delay:-0.77s;opacity:0.27"></i><i style="left:83.8%;top:-39.2%;height:22px;animation-duration:0.92s;animation-delay:-1.00s;opacity:0.28"></i><i style="left:-18.7%;top:-16.2%;height:41px;animation-duration:0.75s;animation-delay:-0.71s;opacity:0.25"></i><i style="left:74.5%;top:-68.9%;height:25px;animation-duration:0.99s;animation-delay:-1.26s;opacity:0.17"></i><i style="left:-6.3%;top:-37.9%;height:43px;animation-duration:1.01s;animation-delay:-0.56s;opacity:0.36"></i><i style="left:73.2%;top:-93.3%;height:43px;animation-duration:0.82s;animation-delay:-0.39s;opacity:0.36"></i><i style="left:30.7%;top:-20.2%;height:23px;animation-duration:1.22s;animation-delay:-0.23s;opacity:0.19"></i><i style="left:39.3%;top:-66.1%;height:33px;animation-duration:1.24s;animation-delay:-0.92s;opacity:0.15"></i><i style="left:17.4%;top:-45.5%;height:32px;animation-duration:1.13s;animation-delay:-0.63s;opacity:0.17"></i><i style="left:9.5%;top:-15.2%;height:28px;animation-duration:1.16s;animation-delay:-1.28s;opacity:0.31"></i><i style="left:61.2%;top:-39.0%;height:27px;animation-duration:1.25s;animation-delay:-0.61s;opacity:0.38"></i><i style="left:16.7%;top:-13.2%;height:40px;animation-duration:1.07s;animation-delay:-0.57s;opacity:0.19"></i><i style="left:72.5%;top:-63.8%;height:37px;animation-duration:0.78s;animation-delay:-0.11s;opacity:0.19"></i><i style="left:77.1%;top:-82.2%;height:43px;animation-duration:0.92s;animation-delay:-0.75s;opacity:0.24"></i><i style="left:54.5%;top:-90.7%;height:29px;animation-duration:1.26s;animation-delay:-0.23s;opacity:0.31"></i><i style="left:19.2%;top:-69.9%;height:19px;animation-duration:0.71s;animation-delay:-1.23s;opacity:0.36"></i><i style="left:76.1%;top:-19.3%;height:45px;animation-duration:0.80s;animation-delay:-0.76s;opacity:0.27"></i><i style="left:48.9%;top:-6.2%;height:39px;animation-duration:1.28s;animation-delay:-0.15s;opacity:0.31"></i><i style="left:61.0%;top:-25.5%;height:35px;animation-duration:1.20s;animation-delay:-0.39s;opacity:0.38"></i><i style="left:28.7%;top:-40.1%;height:43px;animation-duration:1.12s;animation-delay:-0.40s;opacity:0.21"></i><i style="left:19.2%;top:-37.3%;height:46px;animation-duration:1.24s;animation-delay:-0.52s;opacity:0.25"></i><i style="left:78.1%;top:-71.6%;height:30px;animation-duration:0.71s;animation-delay:-0.24s;opacity:0.29"></i><i style="left:63.2%;top:-38.5%;height:28px;animation-duration:1.27s;animation-delay:-0.81s;opacity:0.19"></i><i style="left:-11.9%;top:-2.6%;height:46px;animation-duration:1.25s;animation-delay:-0.78s;opacity:0.23"></i><i style="left:-9.0%;top:-74.2%;height:24px;animation-duration:1.26s;animation-delay:-1.16s;opacity:0.34"></i><i style="left:-2.2%;top:-76.2%;height:26px;animation-duration:1.27s;animation-delay:-0.21s;opacity:0.35"></i><i style="left:61.7%;top:-45.3%;height:45px;animation-duration:0.86s;animation-delay:-0.68s;opacity:0.19"></i><i style="left:-8.4%;top:-96.8%;height:27px;animation-duration:0.77s;animation-delay:-0.08s;opacity:0.40"></i></div>
+    </figure>
+    <div>
+      <p class="small rise">Every industry needs its own frontier.</p>
+      <h1 class="chain rise" style="animation-delay:.12s">
+        <span>Software should be <em class="hl">vertical</em>.</span>
+        <span>Vertical should be <em class="hl">opinionated</em>.</span>
+        <span>Opinionated should be steeped in outcome-focused research.</span>
+      </h1>
+    </div>
+  </div></section>
+
+  <div class="wrap">
+    <section class="what" aria-label="What we do"><p>We experiment with cutting-edge technology and how it can be used in e-commerce and CRM.</p></section>
+    <div class="verts">
+      <section class="vert" id="ecommerce" aria-labelledby="h-eco">
+        <h2 id="h-eco">E-commerce</h2>
+        <p class="sub">See how you can use the latest tech in your industry to set up and manage your e-commerce store.</p>
+        <ul><li><a class="xp" href="#goal-driven-seller-management"><span class="xp-id">E-01</span><span class="xp-t">Goal-Driven Seller Management</span><time>9 Nov 2026</time><span class="xp-go">Read more →</span></a></li><li><a class="xp" href="#vestiaire-voice-rail"><span class="xp-id">E-02</span><span class="xp-t">Voice rail for pre-owned luxury</span><time>13 Nov 2026</time><span class="xp-go">Read more →</span></a></li><li><a class="xp" href="#amazon-seller-apis"><span class="xp-id">E-03</span><span class="xp-t">What an agent can do with Amazon's Seller APIs</span><time>15 Nov 2026</time><span class="xp-go">Read more →</span></a></li></ul>
+      </section>
+      <section class="vert" id="crm" aria-labelledby="h-crm">
+        <h2 id="h-crm">CRM</h2>
+        <p class="sub">See how you can use the latest tech in your industry to set up and manage your customer relationships.</p>
+        <ul><li><a class="xp" href="#crm-customer-context-intelligence"><span class="xp-id">C-01</span><span class="xp-t">Customer, Context, Intelligence: Where CRM Goes Next</span><time>13 Nov 2026</time><span class="xp-go">Read more →</span></a></li><li><a class="xp" href="#agent-native-pandadoc"><span class="xp-id">C-02</span><span class="xp-t">Agent-native agreements</span><time>26 Oct 2026</time><span class="xp-go">Read more →</span></a></li><li><a class="xp" href="#pandadoc-growth-playbook"><span class="xp-id">C-03</span><span class="xp-t">Win the agent's choice, then earn the customer</span><time>26 Oct 2026</time><span class="xp-go">Read more →</span></a></li></ul>
+      </section>
+    </div>
+    <section class="inspired" aria-label="Inspired by">
+      <p class="label">Inspired by Dan Shipper and Every</p>
+      <blockquote class="twitter-tweet" data-dnt="true"><a href="https://x.com/danshipper/status/2113010761786175970">View Dan Shipper's post on X →</a></blockquote>
+    </section>
+  </div>
+</div>
+<section class="view case" data-view="goal-driven-seller-management" hidden>
+  <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
+  <div class="wrap case-head">
+    <a class="back" href="#ecommerce">← E-commerce</a>
+    <div class="case-meta"><span>E-commerce · Experiment E-01</span><span>Concept</span><time>9 Nov 2026</time></div>
+    <h1>Goal-Driven Seller Management</h1>
+    <p class="dek">The seller sets a goal once. Agents plan, act and report every day, and anything that moves money comes back for a yes.</p>
+  </div>
+  <div class="wrap case-body">
+    <div class="block"><h2>The question</h2><p class="lead">Marketplace sellers juggle listings, stock, ads and pricing across tools built for clicks, not outcomes. What if the seller stated the outcome they want, and agents worked toward it?</p></div>
+    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>Architecture</h3><p>Goal-driven agents sit on top of an existing commerce platform and reach it through MCP or an app marketplace. They get tools, not database access: read, act, ask. Every action is logged.</p></div><div class="ex"><h3>What a seller really needs</h3><p>Outcomes tracked against their own targets (sales, margin, returns), simplicity (the one thing to fix today), and autonomy with a say on the big calls.</p></div><div class="ex"><h3>Four pivots</h3><p>Autonomous, goal-driven agents. A human in the loop for pricing, policy and inventory. Auto-correction of routine problems. An inventory of every action the agent has taken.</p></div></div></div>
+    <div class="block"><h2>What we found</h2><ul class="finds"><li>Seller work passes the agent-fit test: a clear, measurable goal, many repeatable actions, and a few high-value human decisions.</li><li>Three use cases carry most of the value: close the sales gap (complete attributes, fix titles for search), fill inventory gaps (pause ads on sold-out items, flag reorders), and find what else to sell (spot demand gaps, draft the new listings).</li><li>The line between agent and seller is money. The agent prepares; the seller approves anything that touches pricing or profitability.</li></ul></div>
+    <div class="block"><h2>What's next</h2><ul class="next"><li>Run the three use cases against a real seller's data.</li><li>Measure time saved and goal attainment against a control month.</li></ul></div>
+    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p></div>
+    <a class="back bottom" href="#ecommerce">← All E-commerce experiments</a>
+  </div>
+</section><section class="view case" data-view="vestiaire-voice-rail" hidden>
+  <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
+  <div class="wrap case-head">
+    <a class="back" href="#ecommerce">← E-commerce</a>
+    <div class="case-meta"><span>E-commerce · Experiment E-02</span><span>Prototype</span><time>13 Nov 2026</time></div>
+    <h1>Voice rail for pre-owned luxury</h1>
+    <p class="dek">Browse 120 real pre-owned jackets by talking. Ten taps of filtering become one sentence.</p>
+  </div>
+  <div class="wrap case-body">
+    <div class="block"><h2>The question</h2><p class="lead">Pre-owned luxury is browse-heavy and filter-heavy. Can voice replace faceted filtering, and keep the screen for looking at the product instead of the controls?</p></div>
+    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>The experience</h3><p>Three jackets lead and ten wait quietly behind them. Say “next” to move on, or refine without starting over: “only black”, “under 400”, “cheaper first”. Every active filter shows as a hang-tag chip.</p></div><div class="ex"><h3>One tool registry</h3><p>Nine tools cover the whole experience. Voice (Gemini Live with function calling), typing and browser agents (through WebMCP) all call the same registry, so they change the screen in exactly the same way.</p></div><div class="ex"><h3>Real catalogue</h3><p>120 real, unsold jackets, 60 men's and 60 women's, captured from Vestiaire Collective's public search on 12 November 2026 and embedded in the page.</p></div></div></div>
+    <div class="block"><h2>What we found</h2><ul class="finds"><li>Seven spoken turns take a shopper from 120 jackets to one €158 leather jacket.</li><li>Refinement, not search, is the heart of it: shoppers narrow down step by step, and the interface has to keep the state visible.</li><li>Building for voice and for agents at the same time is cheap when both go through one set of tools.</li></ul></div>
+    <div class="block"><h2>What's next</h2><ul class="next"><li>Run a live voice session and tune the prompt on real speech.</li><li>Swap the static snapshot for live search, and test a second category.</li></ul></div>
+    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p></div>
+    <a class="back bottom" href="#ecommerce">← All E-commerce experiments</a>
+  </div>
+</section><section class="view case" data-view="amazon-seller-apis" hidden>
+  <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
+  <div class="wrap case-head">
+    <a class="back" href="#ecommerce">← E-commerce</a>
+    <div class="case-meta"><span>E-commerce · Experiment E-03</span><span>Research</span><time>15 Nov 2026</time></div>
+    <h1>What an agent can do with Amazon's Seller APIs</h1>
+    <p class="dek">The APIs already let an agent fix listings, stock and prices. What is missing is the decision layer on top.</p>
+  </div>
+  <div class="wrap case-body">
+    <div class="block"><h2>The question</h2><p class="lead">How much of an agent-first seller experience can be built on Amazon's Selling Partner API today, and where does the judgement have to come from us?</p></div>
+    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>Access</h3><p>A seller can connect an agent to their own account for free; serving many sellers means a public app with OAuth sign-in. Access is granted role by role.</p></div><div class="ex"><h3>Map of the APIs</h3><p>Ten API families cover listings, catalogue, pricing, notifications, orders, inventory, analytics, customer feedback and buyer messaging. Ads sit outside, in a separate API.</p></div><div class="ex"><h3>Four propositions</h3><p>Does the small things, flags what needs the seller, shows blind spots, and works toward a goal. Each was tested against the actual endpoints.</p></div></div></div>
+    <div class="block"><h2>What we found</h2><ul class="finds"><li>Small fixes are fully possible: listings can be patched attribute by attribute, previewed before they go live, and watched for new issues.</li><li>Flagging what needs the seller is possible, but the judgement is ours to build: Amazon offers an expected price to win the featured offer, but no price-elasticity score.</li><li>Blind spots (search gaps, review themes) are visible only to brand owners. Goal tracking works from hourly sales and traffic events plus daily metrics.</li><li>The risks: attribute rules change monthly, versions retire steadily, and sellers distrust AI that edits listings without asking.</li></ul></div>
+    <div class="block"><h2>What's next</h2><ul class="next"><li>Build the decision layer: price sensitivity from the agent's own tests.</li><li>Prototype the approval flow sellers will actually trust.</li></ul></div>
+    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p></div>
+    <a class="back bottom" href="#ecommerce">← All E-commerce experiments</a>
+  </div>
+</section><section class="view case" data-view="crm-customer-context-intelligence" hidden>
+  <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
+  <div class="wrap case-head">
+    <a class="back" href="#crm">← CRM</a>
+    <div class="case-meta"><span>CRM · Experiment C-01</span><span>Essay</span><time>13 Nov 2026</time></div>
+    <h1>Customer, Context, Intelligence: Where CRM Goes Next</h1>
+    <p class="dek">Workflows are now easy to rebuild. CRMs that only move records risk becoming dumb pipes.</p>
+  </div>
+  <div class="wrap case-body">
+    <div class="block"><h2>The question</h2><p class="lead">If anyone can rebuild CRM workflows in a weekend, what is left to compete on?</p></div>
+    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>Customer</h3><p>The customer starts well before they are in your system: one-to-one with known contacts, one-to-many in communities and channels, many-to-many through partners and creators.</p></div><div class="ex"><h3>Context</h3><p>Matching a need to a product is stage one. The harder problems are intent (knowing when someone is actually looking) and reach (getting to them at all).</p></div><div class="ex"><h3>Channel</h3><p>Email is polluted, social is noisy, and attention is the scarce currency. Increasingly the audience on the other end is an agent doing the evaluation.</p></div></div></div>
+    <div class="block"><h2>What we found</h2><ul class="finds"><li>Workflow is no longer a moat. Acquisition before a lead exists, and outreach that earns attention, are harder and more defensible.</li><li>Every company needs to be a trusted voice that its customers' agents can understand and choose.</li><li>The open question: who becomes the Truecaller of the CRM era, telling you who is real, who is legitimate and who is worth your time?</li><li>Pricing is likely to move from seats and tasks to outcomes.</li></ul></div>
+    <div class="block"><h2>What's next</h2><ul class="next"><li>Part two: context and intelligence, and how to build something that can't be vibe-coded in a weekend.</li></ul></div>
+    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p></div>
+    <a class="back bottom" href="#crm">← All CRM experiments</a>
+  </div>
+</section><section class="view case" data-view="agent-native-pandadoc" hidden>
+  <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
+  <div class="wrap case-head">
+    <a class="back" href="#crm">← CRM</a>
+    <div class="case-meta"><span>CRM · Experiment C-02</span><span>Concept film</span><time>26 Oct 2026</time></div>
+    <h1>Agent-native agreements</h1>
+    <p class="dek">Four principles that make a document platform agent-native, each shown as one end-to-end flow with the metric to watch.</p>
+  </div>
+  <div class="wrap case-body">
+    <div class="block"><h2>The question</h2><p class="lead">Contracts suit agents: several teams, repetitive jobs, hand-offs between sales, legal and finance, and a clear finish line in a signature. What does an agreements platform look like when people use it from their own agent?</p></div>
+    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>Access</h3><p>Ask your own agent for an NDA; it drafts over MCP, legal approves inside the chat, and it is sent and signed. Metric: requests completed end to end inside the agent.</p></div><div class="ex"><h3>Write surface</h3><p>The document renders beside the chat with fields filled and the one change from the template highlighted. Sales, legal and finance each see their own view.</p></div><div class="ex"><h3>Intelligence and proactivity</h3><p>Decisions instead of warnings: “liability is uncapped” becomes a one-click fix from the playbook, and exceptions are remembered with reason, scope and expiry. Renewals arrive drafted 30 days before a contract lapses.</p></div></div></div>
+    <div class="block"><h2>What we found</h2><ul class="finds"><li>Public reviews back three of the four principles indirectly, through workflow pain such as editing after sending and expiring contracts.</li><li>No recent reviewer asks for AI or agents by name. The loudest complaints are about billing and support, which none of the principles address.</li><li>Metered agent access would work against the access principle.</li></ul></div>
+    <div class="block"><h2>What's next</h2><ul class="next"><li>Test the write surface with a legal reviewer.</li><li>Track time-to-review and redlines per contract.</li></ul></div>
+    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p><p class="note">An independent concept using PandaDoc as the example, not an official PandaDoc product.</p></div>
+    <a class="back bottom" href="#crm">← All CRM experiments</a>
+  </div>
+</section><section class="view case" data-view="pandadoc-growth-playbook" hidden>
+  <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
+  <div class="wrap case-head">
+    <a class="back" href="#crm">← CRM</a>
+    <div class="case-meta"><span>CRM · Experiment C-03</span><span>Playbook</span><time>26 Oct 2026</time></div>
+    <h1>Win the agent's choice, then earn the customer</h1>
+    <p class="dek">How a document platform grows when the agent, not the person, picks the tool.</p>
+  </div>
+  <div class="wrap case-body">
+    <div class="block"><h2>The question</h2><p class="lead">Customers increasingly arrive like this: someone asks for a contract, the agent picks the tool, and that tool earns the customer. How do you grow in that world?</p></div>
+    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>Lever 1: be the agent's first choice</h3><p>Agents choose by reading tool descriptions. Write them for the job (agreements, quotes, NDAs that need signing), not for the API. Metric: how often the agent picks you.</p></div><div class="ex"><h3>Lever 2: first agreements, no sign-up</h3><p>Let the first one or two agreements go out on the agent's sign-in, and offer to claim an account once they are signed.</p></div><div class="ex"><h3>Levers 3 and 4: value before asking, pocket-sized plans</h3><p>A finished draft before any form. Pay for the few agreements you need, then grow into seats.</p></div></div></div>
+    <div class="block"><h2>What we found</h2><ul class="finds"><li>The funnel now starts inside someone else's assistant. Tool descriptions are the new landing page.</li><li>Fuzzy template matching and failed sends that report success quietly lose the agent's trust.</li><li>Sign-up walls are friction an agent can't get past. Defer them.</li></ul></div>
+    <div class="block"><h2>What's next</h2><ul class="next"><li>Measure pick rate across assistants.</li><li>Pilot a no-sign-up first send.</li></ul></div>
+    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p><p class="note">An independent concept using PandaDoc as the example, not an official PandaDoc product.</p></div>
+    <a class="back bottom" href="#crm">← All CRM experiments</a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></footer>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+(function(){
+  var ids = ['goal-driven-seller-management', 'vestiaire-voice-rail', 'amazon-seller-apis', 'crm-customer-context-intelligence', 'agent-native-pandadoc', 'pandadoc-growth-playbook'];
+  function route(){
+    var h = (location.hash || '').slice(1), isCase = ids.indexOf(h) > -1;
+    document.querySelectorAll('.view').forEach(function(v){ v.hidden = isCase ? v.dataset.view !== h : v.dataset.view !== 'home'; });
+    document.body.classList.toggle('case-mode', isCase);
+    if (isCase) { window.scrollTo(0,0); document.title = document.querySelector('[data-view="'+h+'"] h1').textContent + ' · Frontier Labs'; }
+    else { document.title = 'Frontier Labs · Every industry needs its own frontier';
+      var el = h && document.getElementById(h); if (el) requestAnimationFrame(function(){ el.scrollIntoView(); }); }
+  }
+  window.addEventListener('hashchange', route); route();
+  var v = document.querySelector('.art video'); if (v) { var p = v.play && v.play(); if (p && p.catch) p.catch(function(){}); }
+})();
+</script>
+</body>
+</html>
