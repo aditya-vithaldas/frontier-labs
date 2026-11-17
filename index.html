@@ -13,6 +13,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
+.all-builds{display:grid!important;grid-template-columns:1fr 1fr;gap:40px!important;margin:48px 0 0;padding:28px 0 0!important;border-top:1px solid var(--line)}
+@media(max-width:800px){.all-builds{grid-template-columns:1fr}}
+.featured{margin-top:56px}
 .featured{margin:72px 0 0;padding-top:28px;border-top:1px solid var(--line)}
 .featured>h2{font-family:var(--disp);font-weight:500;font-size:24px;letter-spacing:-.01em;margin:0 0 22px}
 .feat{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:start;padding:0 0 36px;margin:0 0 36px;border-bottom:1px solid var(--line)}
@@ -240,20 +243,16 @@ footer .wrap{display:flex;flex-direction:column;gap:18px}
             <source src="assets/hero/storm.mp4" type="video/mp4">
           </video>
         </figure>
-        <nav class="xlist" aria-label="Experiments">
-          <section id="ecommerce"><h2>E-commerce</h2><ul><li><a class="xp" href="betsy/"><span class="xp-t">Inline sales guidance for sellers<span class="new">New</span></span><time>Nov 2026</time></a></li><li><a class="xp" href="surface/"><span class="xp-t">Dynamic UIs based on user requests<span class="new">New</span></span><time>Nov 2026</time></a></li><li><a class="xp" href="meridian/"><span class="xp-t">Talk to your data with a live analyst</span><time>Sep 2026</time></a></li><li class="extra" hidden><a class="xp" href="live-selling/"><span class="xp-t">Turn your old shelf photos into listings with visual article detection</span><time>Apr 2026</time></a></li><li class="extra" hidden><a class="xp" href="voice-shopping/"><span class="xp-t">Voice-based search and product discovery with Gemini Live 3.8</span><time>Mar 2026</time></a></li></ul><button class="more-btn" type="button" aria-expanded="false" onclick="this.previousElementSibling.querySelectorAll('li.extra').forEach(function(li){li.hidden=false});this.remove()">View 2 more</button><ul hidden></ul></section>
-          <section id="crm"><h2>CRM</h2><ul><li><a class="xp" href="fireside-crm/"><span class="xp-t">Reach your customers higher in the funnel with social discovery<span class="new">New</span></span><time>Nov 2026</time></a></li></ul></section>
-        </nav>
       </div>
     </div>
     <section class="featured" aria-labelledby="feat-h">
-      <h2 id="feat-h">Latest builds</h2>
+      <h2 id="feat-h">Latest experiences</h2>
       <article class="feat">
         <a class="feat-img" href="betsy/" tabindex="-1" aria-hidden="true"><img src="assets/b/betsy.jpg" alt="" loading="lazy"></a>
         <div class="feat-body">
           <p class="feat-meta">E-commerce · Betsy · Nov 2026<span class="new">New</span></p>
           <h3><a href="betsy/">Inline sales guidance for sellers</a></h3>
-          <p class="feat-sum">What a marketplace seller should see on day one, built as working screens.</p>
+          <p class="feat-sum">Product guidance baked into the product is likely to make your partners more effective.</p>
           <dl><dt>Thesis</dt><dd>Marketplace sellers need a home screen that tells them what to do next, with AI inside each step.</dd><dt>Solution</dt><dd>Betsy is a fictional marketplace with a new seller’s dashboard: welcome tips, first wins and month-one charts with recommendations. It adds a catalog-onboarding queue and a component guide with AI building blocks such as “ask about this”, thinking traces and deep research.</dd></dl>
           <a class="feat-go" href="betsy/">See the build →</a>
         </div>
@@ -261,13 +260,17 @@ footer .wrap{display:flex;flex-direction:column;gap:18px}
         <a class="feat-img contain" href="surface/" tabindex="-1" aria-hidden="true"><img src="assets/b/surface-results.jpg" alt="" loading="lazy"></a>
         <div class="feat-body">
           <p class="feat-meta">E-commerce · Surface · Nov 2026<span class="new">New</span></p>
-          <h3><a href="surface/">Dynamic UIs based on user requests</a></h3>
-          <p class="feat-sum">Instead of fixed pages, the screen shows exactly what you asked about.</p>
-          <dl><dt>Thesis</dt><dd>Store pages have barely changed since 2002. The interface can now follow the shopper instead.</dd><dt>Solution</dt><dd>Speak to the orb. Search returns four products with a reason for each. Ask about reviews, fabric or fit, and the screen changes to show just that.</dd></dl>
+          <h3><a href="surface/">Voice-based e-commerce search and browse</a></h3>
+          <p class="feat-sum">A store that rearranges itself around each question is likely to help shoppers decide faster.</p>
+          <dl><dt>Thesis</dt><dd>Voice lets people describe what they need in far more detail, even when they can’t put it crisply, and it reduces the cognitive load on the shopper.</dd><dt>Solution</dt><dd>Speak to the orb. Search returns four products with a reason for each. Ask about reviews, fabric or fit, and the screen changes to show just that.</dd></dl>
           <a class="feat-go" href="surface/">See the build →</a>
         </div>
       </article>
     </section>
+    <nav class="xlist all-builds" aria-label="All experiences">
+      <section id="ecommerce"><h2>E-commerce</h2><ul><li><a class="xp" href="betsy/"><span class="xp-t">Inline sales guidance for sellers<span class="new">New</span></span><time>Nov 2026</time></a></li><li><a class="xp" href="surface/"><span class="xp-t">Voice-based e-commerce search and browse<span class="new">New</span></span><time>Nov 2026</time></a></li><li><a class="xp" href="meridian/"><span class="xp-t">Talk to your data with a live analyst</span><time>Sep 2026</time></a></li><li class="extra" hidden><a class="xp" href="live-selling/"><span class="xp-t">Turn your old shelf photos into listings with visual article detection</span><time>Apr 2026</time></a></li><li class="extra" hidden><a class="xp" href="voice-shopping/"><span class="xp-t">Voice-based search and product discovery with Gemini Live 3.8</span><time>Mar 2026</time></a></li></ul><button class="more-btn" type="button" aria-expanded="false" onclick="this.previousElementSibling.querySelectorAll('li.extra').forEach(function(li){li.hidden=false});this.remove()">View 2 more</button><ul hidden></ul></section>
+      <section id="crm"><h2>CRM</h2><ul><li><a class="xp" href="fireside-crm/"><span class="xp-t">Reach your customers higher in the funnel with social discovery<span class="new">New</span></span><time>Nov 2026</time></a></li></ul></section>
+    </nav>
     <section class="articles" id="articles" aria-labelledby="art-h">
       <h2 id="art-h">Articles</h2>
       <div class="art-cols">

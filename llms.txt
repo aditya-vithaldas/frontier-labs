@@ -17,7 +17,7 @@
 - [Talk to your data with a live analyst (Meridian)](https://frontier-labs.app/meridian/)
 - [Voice-based search and product discovery](https://frontier-labs.app/voice-shopping/)
 - [Turn shelf photos into listings with visual article detection](https://frontier-labs.app/live-selling/)
-- [Dynamic UIs based on user requests (Surface)](https://frontier-labs.app/surface/)
+- [Voice-based e-commerce search and browse (Surface)](https://frontier-labs.app/surface/)
 - [Inline sales guidance for sellers (Betsy)](https://frontier-labs.app/betsy/)
 
 ## Contact
