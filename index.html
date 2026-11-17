@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Frontier Labs · Every industry needs its own frontier</title>
-<meta name="description" content="Frontier Labs experiments with cutting-edge technology and how it can be used in e-commerce and CRM.">
+<meta name="description" content="We create and freely share frontier experiences using today's tech, for e-commerce and CRM.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
-:root{--ground:#f4efe4;--surface:#fbf8f1;--ink:#141a33;--muted:#4d5270;--line:#d9d1bf;--accent:#b5401b;--yellow:#f2b632;--navy:#0d1433;--navy2:#141c45;
+:root{--ground:#f7f9f9;--surface:#ffffff;--ink:#141a33;--muted:#4d5270;--line:#dfe3e6;--accent:#b5401b;--yellow:#f2b632;--navy:#0d1433;--navy2:#141c45;
 --disp:'Fraunces',Georgia,serif;--text:'Inter Tight',system-ui,-apple-system,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -24,24 +24,20 @@ a{color:inherit}:focus-visible{outline:3px solid var(--yellow);outline-offset:3p
 .case-mode .nav{background:var(--ground);color:var(--ink);border-bottom:1px solid var(--line)}
 .case-mode .links a{border-color:var(--line)}
 /* banner */
-.banner{background:var(--navy);color:#f4efe4;padding:28px 0 96px;position:relative;overflow:hidden}
-.banner::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 15% 40%,rgba(47,95,179,.35),transparent 70%),radial-gradient(40% 50% at 85% 10%,rgba(242,182,50,.08),transparent 70%);pointer-events:none}
-.banner .wrap{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center}
-.art{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.7),0 0 0 1px rgba(244,239,228,.08)}
-.art video,.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;animation:drift 24s ease-in-out infinite alternate}
-@keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.07) translate(-1.2%,-.6%)}}
-.rain{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.rain i{position:absolute;width:1.2px;background:linear-gradient(transparent,#e8eef5);transform:rotate(-17deg);animation:fall 1s linear infinite}
-@keyframes fall{from{transform:translate(0,0) rotate(-17deg)}to{transform:translate(18vw,60vw) rotate(-17deg)}}
-.small{font-family:var(--disp);font-style:italic;font-size:clamp(20px,1.8vw,26px);color:#d8dcf0;margin:0 0 22px}
-.chain{font-family:var(--disp);font-weight:500;font-size:clamp(34px,3.6vw,54px);line-height:1.08;letter-spacing:-.025em;margin:0}
-.chain span{display:block}
-.chain span+span{margin-top:.18em}
+.banner{background:var(--ground);color:var(--ink);padding:40px 0 72px;overflow:hidden}
+.banner .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:32px;align-items:center}
+.art{position:relative;aspect-ratio:1280/760;margin-right:-4vw}
+.art video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 9%,#000 93%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 9%,#000 93%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);mask-composite:intersect}
+.small{font-family:var(--disp);font-style:italic;font-size:clamp(18px,1.6vw,23px);color:var(--muted);margin:0 0 18px}
+h1.headline{font-family:var(--disp);font-weight:500;font-size:clamp(36px,3.9vw,58px);line-height:1.04;letter-spacing:-.03em;margin:0;text-wrap:balance}
+h1.headline em{font-style:italic;color:var(--accent)}
+.chain{list-style:none;margin:30px 0 0;padding:22px 0 0;border-top:1px solid var(--line);font-family:var(--disp);font-size:clamp(19px,1.7vw,24px);line-height:1.35}
+.chain li+li{margin-top:6px}
 .hl{font-style:italic;color:var(--ink);background:var(--yellow);padding:0 .22em .04em;border-radius:.16em .45em .2em .38em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 /* what we do */
 .what{padding:96px 0 40px}
 .what p{font-family:var(--disp);font-size:clamp(26px,2.6vw,36px);line-height:1.3;letter-spacing:-.01em;margin:0;max-width:900px}
-.verts{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:56px;padding:56px 0 96px}
+.verts{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:56px;padding:72px 0 96px;border-top:1px solid var(--line)}
 .vert h2{font-family:var(--disp);font-weight:500;font-size:clamp(40px,4vw,56px);line-height:1;letter-spacing:-.03em;margin:0}
 .vert .sub{margin:14px 0 26px;color:var(--muted);font-size:19px;max-width:460px}
 .vert ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
@@ -75,7 +71,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 .finds,.next{margin:0;padding-left:22px;display:grid;gap:12px}.finds li::marker{color:var(--accent)}
 .free p{margin:0}.note{margin-top:14px!important;font-size:15px;color:var(--muted)}.back.bottom{margin-top:28px}
 .rise{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-@media (max-width:900px){.banner .wrap{grid-template-columns:1fr;gap:36px}.inspired{grid-template-columns:1fr}.verts{grid-template-columns:1fr}}
+@media (max-width:900px){.banner .wrap{grid-template-columns:1fr;gap:24px}.art{order:-1;margin:0 -20px}.inspired{grid-template-columns:1fr}.verts{grid-template-columns:1fr}}
 @media (max-width:600px){.wrap{padding:0 20px}.brand{font-size:20px}.links a{padding:8px 12px;font-size:14px}.xp{grid-template-columns:auto 1fr;grid-template-areas:"id date" "t t" "go go"}.what{padding-top:64px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
 </style>
@@ -87,25 +83,25 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 </div></header>
 <main>
 <div class="view" data-view="home">
-  <section class="banner" id="top" aria-label="Thesis"><div class="wrap">
-    <figure class="art" style="margin:0">
-      <video autoplay muted loop playsinline preload="auto" poster="assets/hero/storm-poster.jpg" aria-label="Acrylic painting in motion: three sailors in yellow oilskins haul a rope on a storm-tossed deck">
-        <source src="assets/hero/storm.mp4" type="video/mp4">
-      </video>
-      <div class="rain" aria-hidden="true"><i style="left:8.3%;top:-89.7%;height:29px;animation-duration:0.79s;animation-delay:-0.09s;opacity:0.25"></i><i style="left:90.2%;top:-20.0%;height:39px;animation-duration:0.83s;animation-delay:-0.70s;opacity:0.22"></i><i style="left:0.7%;top:-89.4%;height:24px;animation-duration:1.26s;animation-delay:-1.08s;opacity:0.35"></i><i style="left:76.1%;top:-80.7%;height:27px;animation-duration:1.08s;animation-delay:-0.95s;opacity:0.36"></i><i style="left:85.6%;top:-91.3%;height:35px;animation-duration:1.10s;animation-delay:-0.66s;opacity:0.19"></i><i style="left:36.8%;top:-91.1%;height:44px;animation-duration:1.22s;animation-delay:-0.71s;opacity:0.23"></i><i style="left:89.1%;top:-42.8%;height:43px;animation-duration:1.21s;animation-delay:-0.66s;opacity:0.25"></i><i style="left:51.9%;top:-56.9%;height:23px;animation-duration:0.88s;animation-delay:-1.06s;opacity:0.16"></i><i style="left:-14.4%;top:-37.4%;height:26px;animation-duration:1.02s;animation-delay:-0.61s;opacity:0.24"></i><i style="left:99.7%;top:-80.4%;height:30px;animation-duration:0.82s;animation-delay:-0.82s;opacity:0.22"></i><i style="left:22.7%;top:-25.3%;height:27px;animation-duration:1.04s;animation-delay:-1.18s;opacity:0.18"></i><i style="left:-12.6%;top:-77.1%;height:39px;animation-duration:1.07s;animation-delay:-0.31s;opacity:0.23"></i><i style="left:1.3%;top:-54.1%;height:19px;animation-duration:1.12s;animation-delay:-1.16s;opacity:0.39"></i><i style="left:68.2%;top:-4.0%;height:19px;animation-duration:0.87s;animation-delay:-1.26s;opacity:0.34"></i><i style="left:29.3%;top:-5.7%;height:35px;animation-duration:1.19s;animation-delay:-0.38s;opacity:0.20"></i><i style="left:33.3%;top:-86.4%;height:29px;animation-duration:1.28s;animation-delay:-0.43s;opacity:0.15"></i><i style="left:-14.6%;top:-83.0%;height:40px;animation-duration:0.92s;animation-delay:-0.38s;opacity:0.17"></i><i style="left:97.8%;top:-57.6%;height:24px;animation-duration:0.74s;animation-delay:-0.07s;opacity:0.19"></i><i style="left:61.2%;top:-85.0%;height:19px;animation-duration:0.99s;animation-delay:-0.32s;opacity:0.40"></i><i style="left:-5.3%;top:-47.1%;height:40px;animation-duration:0.95s;animation-delay:-1.28s;opacity:0.27"></i><i style="left:9.0%;top:-58.9%;height:19px;animation-duration:0.95s;animation-delay:-0.32s;opacity:0.37"></i><i style="left:79.7%;top:-50.1%;height:19px;animation-duration:0.85s;animation-delay:-0.32s;opacity:0.20"></i><i style="left:7.8%;top:-13.0%;height:22px;animation-duration:0.73s;animation-delay:-1.21s;opacity:0.29"></i><i style="left:98.9%;top:-59.7%;height:43px;animation-duration:1.09s;animation-delay:-1.03s;opacity:0.34"></i><i style="left:39.3%;top:-90.7%;height:24px;animation-duration:1.22s;animation-delay:-1.17s;opacity:0.38"></i><i style="left:20.4%;top:-34.3%;height:40px;animation-duration:1.09s;animation-delay:-1.06s;opacity:0.28"></i><i style="left:58.6%;top:-31.4%;height:26px;animation-duration:1.25s;animation-delay:-1.24s;opacity:0.17"></i><i style="left:96.5%;top:-3.8%;height:37px;animation-duration:0.73s;animation-delay:-1.17s;opacity:0.18"></i><i style="left:96.2%;top:-33.3%;height:20px;animation-duration:0.80s;animation-delay:-0.83s;opacity:0.29"></i><i style="left:69.6%;top:-7.3%;height:24px;animation-duration:0.70s;animation-delay:-1.20s;opacity:0.15"></i><i style="left:85.2%;top:-88.4%;height:41px;animation-duration:1.17s;animation-delay:-1.14s;opacity:0.29"></i><i style="left:85.4%;top:-79.8%;height:37px;animation-duration:0.90s;animation-delay:-1.16s;opacity:0.34"></i><i style="left:36.6%;top:-47.4%;height:19px;animation-duration:0.72s;animation-delay:-0.77s;opacity:0.27"></i><i style="left:83.8%;top:-39.2%;height:22px;animation-duration:0.92s;animation-delay:-1.00s;opacity:0.28"></i><i style="left:-18.7%;top:-16.2%;height:41px;animation-duration:0.75s;animation-delay:-0.71s;opacity:0.25"></i><i style="left:74.5%;top:-68.9%;height:25px;animation-duration:0.99s;animation-delay:-1.26s;opacity:0.17"></i><i style="left:-6.3%;top:-37.9%;height:43px;animation-duration:1.01s;animation-delay:-0.56s;opacity:0.36"></i><i style="left:73.2%;top:-93.3%;height:43px;animation-duration:0.82s;animation-delay:-0.39s;opacity:0.36"></i><i style="left:30.7%;top:-20.2%;height:23px;animation-duration:1.22s;animation-delay:-0.23s;opacity:0.19"></i><i style="left:39.3%;top:-66.1%;height:33px;animation-duration:1.24s;animation-delay:-0.92s;opacity:0.15"></i><i style="left:17.4%;top:-45.5%;height:32px;animation-duration:1.13s;animation-delay:-0.63s;opacity:0.17"></i><i style="left:9.5%;top:-15.2%;height:28px;animation-duration:1.16s;animation-delay:-1.28s;opacity:0.31"></i><i style="left:61.2%;top:-39.0%;height:27px;animation-duration:1.25s;animation-delay:-0.61s;opacity:0.38"></i><i style="left:16.7%;top:-13.2%;height:40px;animation-duration:1.07s;animation-delay:-0.57s;opacity:0.19"></i><i style="left:72.5%;top:-63.8%;height:37px;animation-duration:0.78s;animation-delay:-0.11s;opacity:0.19"></i><i style="left:77.1%;top:-82.2%;height:43px;animation-duration:0.92s;animation-delay:-0.75s;opacity:0.24"></i><i style="left:54.5%;top:-90.7%;height:29px;animation-duration:1.26s;animation-delay:-0.23s;opacity:0.31"></i><i style="left:19.2%;top:-69.9%;height:19px;animation-duration:0.71s;animation-delay:-1.23s;opacity:0.36"></i><i style="left:76.1%;top:-19.3%;height:45px;animation-duration:0.80s;animation-delay:-0.76s;opacity:0.27"></i><i style="left:48.9%;top:-6.2%;height:39px;animation-duration:1.28s;animation-delay:-0.15s;opacity:0.31"></i><i style="left:61.0%;top:-25.5%;height:35px;animation-duration:1.20s;animation-delay:-0.39s;opacity:0.38"></i><i style="left:28.7%;top:-40.1%;height:43px;animation-duration:1.12s;animation-delay:-0.40s;opacity:0.21"></i><i style="left:19.2%;top:-37.3%;height:46px;animation-duration:1.24s;animation-delay:-0.52s;opacity:0.25"></i><i style="left:78.1%;top:-71.6%;height:30px;animation-duration:0.71s;animation-delay:-0.24s;opacity:0.29"></i><i style="left:63.2%;top:-38.5%;height:28px;animation-duration:1.27s;animation-delay:-0.81s;opacity:0.19"></i><i style="left:-11.9%;top:-2.6%;height:46px;animation-duration:1.25s;animation-delay:-0.78s;opacity:0.23"></i><i style="left:-9.0%;top:-74.2%;height:24px;animation-duration:1.26s;animation-delay:-1.16s;opacity:0.34"></i><i style="left:-2.2%;top:-76.2%;height:26px;animation-duration:1.27s;animation-delay:-0.21s;opacity:0.35"></i><i style="left:61.7%;top:-45.3%;height:45px;animation-duration:0.86s;animation-delay:-0.68s;opacity:0.19"></i><i style="left:-8.4%;top:-96.8%;height:27px;animation-duration:0.77s;animation-delay:-0.08s;opacity:0.40"></i></div>
-    </figure>
+  <section class="banner" id="top" aria-label="Introduction"><div class="wrap">
     <div>
       <p class="small rise">Every industry needs its own frontier.</p>
-      <h1 class="chain rise" style="animation-delay:.12s">
-        <span>Software should be <em class="hl">vertical</em>.</span>
-        <span>Vertical should be <em class="hl">opinionated</em>.</span>
-        <span>Opinionated should be steeped in outcome-focused research.</span>
-      </h1>
+      <h1 class="headline rise" style="animation-delay:.1s">We create and freely share <em>frontier experiences</em> using today&#8217;s tech, for e&#8209;commerce and CRM.</h1>
+      <ul class="chain rise" style="animation-delay:.25s">
+        <li>Software should be <em class="hl">vertical</em>.</li>
+        <li>Vertical should be <em class="hl">opinionated</em>.</li>
+        <li>Opinionated should be steeped in outcome-focused research.</li>
+      </ul>
     </div>
+    <figure class="art" style="margin:0">
+      <video autoplay muted loop playsinline preload="auto" poster="assets/hero/storm-poster.jpg" aria-label="Acrylic painting in motion: three sailors in yellow oilskins haul a rope on a storm-tossed deck, the waves fading into the page">
+        <source src="assets/hero/storm.mp4" type="video/mp4">
+      </video>
+    </figure>
   </div></section>
 
   <div class="wrap">
-    <section class="what" aria-label="What we do"><p>We experiment with cutting-edge technology and how it can be used in e-commerce and CRM.</p></section>
+    
     <div class="verts">
       <section class="vert" id="ecommerce" aria-labelledby="h-eco">
         <h2 id="h-eco">E-commerce</h2>
