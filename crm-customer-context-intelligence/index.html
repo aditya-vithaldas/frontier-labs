@@ -2,12 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="icon" type="image/png" href="../assets/logo/seal.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Customer, Context, Intelligence: Where CRM Goes Next · Frontier Labs</title>
 <meta name="description" content="Workflows are now easy to rebuild. CRMs that only move records risk becoming dumb pipes.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
+.articles{margin:72px 0 40px;padding-top:28px;border-top:1px solid var(--line)}
+.articles h2{font-family:var(--disp);font-weight:500;font-size:24px;letter-spacing:-.01em;margin:0 0 18px}
+.art-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.art-cols h3{font-family:var(--text);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.art-cols ul{list-style:none;margin:0;padding:0}
+@media(max-width:800px){.art-cols{grid-template-columns:1fr}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+.btn.pri{background:var(--ink);color:#fff}.btn.ghost{border-color:var(--line)}
+.btn:hover{opacity:.85}
+.demo .yt{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 20px 50px -24px rgba(13,20,51,.45)}
+.demo .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.shot{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px -24px rgba(13,20,51,.35);background:#fff}
+.shot img{display:block;width:100%;height:auto}
+.shot.tall{max-width:520px}.shot.phone{max-width:300px}
+.case-body .block p{font-size:18px;line-height:1.6;max-width:720px;margin:0}
+.case-body .block p.lead{font-size:24px;line-height:1.45}
+
 :root{--ground:#f7f9f9;--surface:#ffffff;--ink:#141a33;--muted:#4d5270;--line:#dfe3e6;--accent:#b5401b;--yellow:#f2b632;--navy:#0d1433;--navy2:#141c45;
 --disp:'Fraunces',Georgia,serif;--text:'Inter Tight',system-ui,-apple-system,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -17,7 +36,11 @@ a{color:inherit}:focus-visible{outline:3px solid var(--yellow);outline-offset:3p
 /* nav */
 .nav{background:var(--ground);color:var(--ink)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:26px;padding-bottom:10px}
-.brand{font-family:var(--disp);font-weight:600;font-size:22px;letter-spacing:-.02em;text-decoration:none}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{width:40px;height:40px;border-radius:50%}
+.bw{display:flex;flex-direction:column;gap:3px;line-height:1}
+.bn{font-family:var(--disp);font-weight:600;font-size:24px;letter-spacing:-.02em}
+.bl{font:600 10.5px/1 var(--sans,"Inter Tight"),sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-left:1px}
 .links{display:flex;gap:28px}
 .links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted);min-height:44px;display:inline-flex;align-items:center;background:linear-gradient(currentColor,currentColor) 0 calc(50% + 12px)/0 1.5px no-repeat;transition:color .2s,background-size .25s}
 .links a:hover{color:var(--ink);background-size:100% 1.5px}
@@ -27,7 +50,7 @@ a{color:inherit}:focus-visible{outline:3px solid var(--yellow);outline-offset:3p
 /* banner */
 .banner{background:var(--ground);color:var(--ink);padding:28px 0 72px;overflow:hidden}
 .banner .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:32px;align-items:center}
-.art{position:relative;aspect-ratio:1280/760;margin-right:-4vw}
+.art{position:relative;aspect-ratio:1584/576;margin-right:-4vw}
 .art video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:darken}
 .small{font-family:var(--disp);font-style:italic;font-size:clamp(18px,1.6vw,23px);color:var(--muted);margin:0 0 18px}
 .chain{font-family:var(--disp);font-weight:500;font-size:clamp(28px,2.9vw,44px);line-height:1.14;letter-spacing:-.025em;margin:0}
@@ -113,13 +136,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 .free p{margin:0}.note{margin-top:14px!important;font-size:15px;color:var(--muted)}.back.bottom{margin-top:28px}
 .rise{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @media (max-width:900px){.banner .wrap{grid-template-columns:1fr;gap:24px}.art{order:-1;margin:0 -20px}.inspired{grid-template-columns:1fr}.verts{grid-template-columns:1fr}}
-@media (max-width:600px){.wrap{padding:0 20px}.brand{font-size:20px}.links{gap:18px}.links a{font-size:14px}.xp{grid-template-columns:auto 1fr;grid-template-areas:"id date" "t t" "go go"}.what{padding-top:64px}}
+@media (max-width:600px){.wrap{padding:0 20px}.bn{font-size:21px}.links{gap:18px}.links a{font-size:14px}.xp{grid-template-columns:auto 1fr;grid-template-areas:"id date" "t t" "go go"}.what{padding-top:64px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
 :root{--banner:url(../assets/hero/banner.jpg)}</style>
 </head>
 <body class="case-mode">
 <header class="nav"><div class="wrap">
-  <a class="brand" href="../">Frontier Labs</a>
+  <a class="brand" href="../" aria-label="Frontier Labs, home"><img src="../assets/logo/seal.png" alt="" width="40" height="40"><span class="bw"><span class="bn">Frontier</span><span class="bl">Labs</span></span></a>
   <nav class="links" aria-label="Verticals"><a href="../#ecommerce">E-commerce</a><a href="../#crm">CRM</a><a class="contact" href="mailto:aditya@distantos.me?subject=Inquiry%20about%20Frontier%20Labs">Contact us</a></nav>
 </div></header>
 <main>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="../assets/logo/seal.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Surface: a store that reshapes to the question · Frontier Labs</title>
+<meta name="description" content="Instead of fixed pages, the screen shows exactly what you asked about.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<style>
+.articles{margin:72px 0 40px;padding-top:28px;border-top:1px solid var(--line)}
+.articles h2{font-family:var(--disp);font-weight:500;font-size:24px;letter-spacing:-.01em;margin:0 0 18px}
+.art-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.art-cols h3{font-family:var(--text);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.art-cols ul{list-style:none;margin:0;padding:0}
+@media(max-width:800px){.art-cols{grid-template-columns:1fr}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+.btn.pri{background:var(--ink);color:#fff}.btn.ghost{border-color:var(--line)}
+.btn:hover{opacity:.85}
+.demo .yt{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 20px 50px -24px rgba(13,20,51,.45)}
+.demo .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.shot{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px -24px rgba(13,20,51,.35);background:#fff}
+.shot img{display:block;width:100%;height:auto}
+.shot.tall{max-width:520px}.shot.phone{max-width:300px}
+.case-body .block p{font-size:18px;line-height:1.6;max-width:720px;margin:0}
+.case-body .block p.lead{font-size:24px;line-height:1.45}
+
+:root{--ground:#f7f9f9;--surface:#ffffff;--ink:#141a33;--muted:#4d5270;--line:#dfe3e6;--accent:#b5401b;--yellow:#f2b632;--navy:#0d1433;--navy2:#141c45;
+--disp:'Fraunces',Georgia,serif;--text:'Inter Tight',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+/* nav */
+.nav{background:var(--ground);color:var(--ink)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:26px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{width:40px;height:40px;border-radius:50%}
+.bw{display:flex;flex-direction:column;gap:3px;line-height:1}
+.bn{font-family:var(--disp);font-weight:600;font-size:24px;letter-spacing:-.02em}
+.bl{font:600 10.5px/1 var(--sans,"Inter Tight"),sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-left:1px}
+.links{display:flex;gap:28px}
+.links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted);min-height:44px;display:inline-flex;align-items:center;background:linear-gradient(currentColor,currentColor) 0 calc(50% + 12px)/0 1.5px no-repeat;transition:color .2s,background-size .25s}
+.links a:hover{color:var(--ink);background-size:100% 1.5px}
+.links a.contact{color:var(--ink);border:1px solid currentColor;border-radius:999px;padding:0 16px;min-height:36px;align-self:center;background:none}
+.links a.contact:hover{background:var(--ink);color:#fff}
+.case-mode .nav{border-bottom:1px solid var(--line)}
+/* banner */
+.banner{background:var(--ground);color:var(--ink);padding:28px 0 72px;overflow:hidden}
+.banner .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:32px;align-items:center}
+.art{position:relative;aspect-ratio:1584/576;margin-right:-4vw}
+.art video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:darken}
+.small{font-family:var(--disp);font-style:italic;font-size:clamp(18px,1.6vw,23px);color:var(--muted);margin:0 0 18px}
+.chain{font-family:var(--disp);font-weight:500;font-size:clamp(28px,2.9vw,44px);line-height:1.14;letter-spacing:-.025em;margin:0}
+.chain span{display:block}
+.chain span+span{margin-top:.22em}
+.mission{display:inline-block;margin:34px 0 0;padding:14px 20px;border:1.5px solid var(--line);border-radius:12px;font-size:17px;line-height:1.5;color:var(--muted);max-width:520px;background:var(--surface)}
+.hl{white-space:nowrap;font-style:italic;color:var(--ink);background:var(--yellow);padding:0 .14em .02em;border-radius:.16em .45em .2em .38em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+/* what we do */
+.what{padding:96px 0 40px}
+.what p{font-family:var(--disp);font-size:clamp(26px,2.6vw,36px);line-height:1.3;letter-spacing:-.01em;margin:0;max-width:900px}
+.verts{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:56px;padding:72px 0 96px;border-top:1px solid var(--line)}
+.vert h2{font-family:var(--disp);font-weight:500;font-size:clamp(40px,4vw,56px);line-height:1;letter-spacing:-.03em;margin:0}
+.vert .sub{margin:14px 0 26px;color:var(--muted);font-size:19px;max-width:460px}
+.vert ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+._oldxp{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"id t date" ". go go";gap:4px 16px;padding:18px 4px;border-bottom:1px solid var(--line);text-decoration:none;align-items:baseline;min-height:44px}
+.xp:hover .xp-t{color:var(--accent)}
+.xp-id{grid-area:id;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--accent)}
+.xp-t{grid-area:t;font-family:var(--disp);font-weight:600;font-size:21px;line-height:1.25;transition:color .2s}
+.xp time{grid-area:date;font-size:14px;color:var(--muted);white-space:nowrap}
+.xp-go{grid-area:go;font-size:15px;font-weight:700;color:var(--accent)}
+.inspired{border-top:1px solid var(--line);padding:56px 0 96px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:40px;align-items:start}
+.inspired .label{font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:8px 0 0}
+footer{border-top:1px solid var(--line);padding:32px 0 44px;font-size:15px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+
+.banner .wrap{align-items:start}
+.lead-col{padding-top:24px}
+.quote{margin:0 0 30px}
+.quote blockquote{margin:0;font-family:var(--disp);font-style:italic;font-weight:500;font-size:clamp(26px,2.4vw,34px);line-height:1.15;color:var(--accent)}
+.quote figcaption{margin-top:8px;font-size:14px;font-weight:600;letter-spacing:.04em}
+.quote figcaption a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+.quote figcaption a:hover{color:var(--ink)}
+.side-col{display:flex;flex-direction:column;gap:8px}
+.xlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:0 4px}
+.xlist h2{font-family:var(--disp);font-weight:600;font-size:22px;margin:0 0 6px;letter-spacing:-.01em}
+.xlist ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.xp{display:block;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.xp-t{display:block;font-family:var(--disp);font-weight:600;font-size:17px;line-height:1.3;transition:color .2s}
+.xp time{font-size:13px;color:var(--muted);margin-right:10px}
+.xp-go{font-size:13px;font-weight:700;color:var(--accent)}
+.xp:hover .xp-t{color:var(--accent)}
+@media (max-width:600px){.xlist{grid-template-columns:1fr}}
+
+.banner{padding:36px 0 80px}
+.banner .wrap{display:block}
+.mission-h{font-family:var(--disp);font-weight:500;font-size:clamp(15px,1.88vw,28px);line-height:1.25;letter-spacing:-.015em;margin:8px 0 40px;max-width:none;white-space:nowrap}
+@media(max-width:720px){.mission-h{white-space:normal;font-size:22px}}
+.mission-h em{font-style:italic;color:var(--accent)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
+.tweet{display:block;max-width:100%;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 10px 30px -18px rgba(20,26,51,.35);transition:transform .25s ease,box-shadow .25s ease}
+.tweet:hover{transform:translateY(-2px);box-shadow:0 16px 36px -18px rgba(20,26,51,.45)}
+.tweet img{display:block;width:100%;height:auto}
+.label{margin:44px 0 12px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.thesis{list-style:none;margin:0;padding:0;font-family:var(--disp);font-weight:500;font-size:clamp(14px,1.2vw,18px);line-height:1.5;letter-spacing:-.01em}
+.thesis li{white-space:nowrap}
+.thesis li+li{margin-top:8px}
+.side-col{display:flex;flex-direction:column;gap:6px}
+.art{margin:-40px -5vw -4px -2vw}
+.xlist{display:flex;flex-direction:column;gap:22px;padding:0 2px}
+.xlist h2{font-family:var(--text);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.xlist ul{list-style:none;margin:0;padding:0}
+.xp{display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:15px;line-height:1.4}
+.xp-t{font-family:var(--text);font-weight:400;font-size:15px;color:var(--ink);transition:color .2s}
+.xp time{font-size:13px;color:var(--muted);white-space:nowrap;margin:0}
+.xp:hover .xp-t{color:var(--accent)}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.thesis{font-size:19px}.thesis li{white-space:normal}.art{margin:0 -20px}}
+/* case pages */
+.case-banner{height:280px;background:var(--banner) center 30%/cover;position:relative}
+.case-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--ground) 0%,rgba(244,239,228,0) 70%)}
+.case-head{margin-top:-90px;position:relative;max-width:964px}
+.back{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--accent);text-decoration:none}
+.back:hover{text-decoration:underline;text-underline-offset:4px}
+.case-meta{display:flex;flex-wrap:wrap;gap:8px 16px;margin:18px 0 0;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.case-meta span:first-child{color:var(--accent)}
+.case h1{font-family:var(--disp);font-weight:500;font-size:clamp(40px,5vw,72px);line-height:1.02;letter-spacing:-.03em;margin:14px 0 0;max-width:16ch}
+.dek{font-family:var(--disp);font-size:clamp(21px,2vw,27px);line-height:1.4;color:var(--muted);margin:22px 0 0;max-width:740px}
+.case-body{padding-top:60px;padding-bottom:120px;max-width:964px}
+.block{padding:36px 0;border-top:1px solid var(--line)}
+.block h2{font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+.lead{font-family:var(--disp);font-size:25px;line-height:1.45;margin:0}
+.exs{display:grid;gap:26px}.ex h3{font-family:var(--disp);font-weight:600;font-size:23px;margin:0 0 6px}.ex p{margin:0;color:var(--muted)}
+.finds,.next{margin:0;padding-left:22px;display:grid;gap:12px}.finds li::marker{color:var(--accent)}
+.free p{margin:0}.note{margin-top:14px!important;font-size:15px;color:var(--muted)}.back.bottom{margin-top:28px}
+.rise{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.banner .wrap{grid-template-columns:1fr;gap:24px}.art{order:-1;margin:0 -20px}.inspired{grid-template-columns:1fr}.verts{grid-template-columns:1fr}}
+@media (max-width:600px){.wrap{padding:0 20px}.bn{font-size:21px}.links{gap:18px}.links a{font-size:14px}.xp{grid-template-columns:auto 1fr;grid-template-areas:"id date" "t t" "go go"}.what{padding-top:64px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+:root{--banner:url(../assets/hero/banner.jpg)}</style>
+</head>
+<body class="case-mode">
+<header class="nav"><div class="wrap">
+  <a class="brand" href="../" aria-label="Frontier Labs, home"><img src="../assets/logo/seal.png" alt="" width="40" height="40"><span class="bw"><span class="bn">Frontier</span><span class="bl">Labs</span></span></a>
+  <nav class="links" aria-label="Verticals"><a href="../#ecommerce">E-commerce</a><a href="../#crm">CRM</a><a class="contact" href="mailto:aditya@distantos.me?subject=Inquiry%20about%20Frontier%20Labs">Contact us</a></nav>
+</div></header>
+<main>
+<section class="view case">
+  <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
+  <div class="wrap case-head">
+    <a class="back" href="../#ecommerce">← E-commerce</a>
+    <div class="case-meta"><span>E-commerce</span><span>Built</span><time>Nov 2026</time></div>
+    <h1>Surface: a store that reshapes to the question</h1>
+    <p class="dek">Instead of fixed pages, the screen shows exactly what you asked about.</p>
+    <div class="btns"><a class="btn pri" href="https://surface-commerce.aditya-vithaldas.chatgpt.site/" target="_blank" rel="noopener">Try Surface ↗</a><a class="btn ghost" href="https://decisionos.me/projects/surface.html" target="_blank" rel="noopener">Read the case study ↗</a></div>
+  </div>
+  <div class="wrap case-body">
+    <div class="block demo"><h2>Demo</h2><a class="shot phone" href="https://surface-commerce.aditya-vithaldas.chatgpt.site/" target="_blank" rel="noopener"><img src="../assets/b/surface-results.jpg" alt="Surface showing four products with reasons" loading="lazy"></a></div><div class="block"><h2>Thesis</h2><p class="lead">Store pages have barely changed since 2002. The interface can now follow the shopper instead.</p></div><div class="block"><h2>Problem</h2><p>Shoppers bounce between search, product pages and back again, because every store lays out the same fixed paths for everyone.</p></div><div class="block"><h2>Solution</h2><p>Speak to the orb. Search returns four products with a reason for each. Ask about reviews, fabric or fit, and the screen changes to show just that.</p></div>
+    <a class="back bottom" href="../#ecommerce">← All E-commerce builds</a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></footer>
+</body>
+</html>
