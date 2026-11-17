@@ -21,6 +21,8 @@ a{color:inherit}:focus-visible{outline:3px solid var(--yellow);outline-offset:3p
 .links{display:flex;gap:28px}
 .links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted);min-height:44px;display:inline-flex;align-items:center;background:linear-gradient(currentColor,currentColor) 0 calc(50% + 12px)/0 1.5px no-repeat;transition:color .2s,background-size .25s}
 .links a:hover{color:var(--ink);background-size:100% 1.5px}
+.links a.contact{color:var(--ink);border:1px solid currentColor;border-radius:999px;padding:0 16px;min-height:36px;align-self:center;background:none}
+.links a.contact:hover{background:var(--ink);color:#fff}
 .case-mode .nav{border-bottom:1px solid var(--line)}
 /* banner */
 .banner{background:var(--ground);color:var(--ink);padding:28px 0 72px;overflow:hidden}
@@ -71,7 +73,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 
 .banner{padding:36px 0 80px}
 .banner .wrap{display:block}
-.mission-h{font-family:var(--disp);font-weight:500;font-size:clamp(22px,2.2vw,32px);line-height:1.25;letter-spacing:-.015em;margin:8px 0 40px;max-width:none;text-wrap:pretty}
+.mission-h{font-family:var(--disp);font-weight:500;font-size:clamp(15px,1.88vw,28px);line-height:1.25;letter-spacing:-.015em;margin:8px 0 40px;max-width:none;white-space:nowrap}
+@media(max-width:720px){.mission-h{white-space:normal;font-size:22px}}
 .mission-h em{font-style:italic;color:var(--accent)}
 .hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
 .tweet{display:block;max-width:100%;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 10px 30px -18px rgba(20,26,51,.35);transition:transform .25s ease,box-shadow .25s ease}
@@ -117,7 +120,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 <body class="case-mode">
 <header class="nav"><div class="wrap">
   <a class="brand" href="../">Frontier Labs</a>
-  <nav class="links" aria-label="Verticals"><a href="../#ecommerce">E-commerce</a><a href="../#crm">CRM</a></nav>
+  <nav class="links" aria-label="Verticals"><a href="../#ecommerce">E-commerce</a><a href="../#crm">CRM</a><a class="contact" href="mailto:aditya@distantos.me?subject=Inquiry%20about%20Frontier%20Labs">Contact us</a></nav>
 </div></header>
 <main>
 <section class="view case" data-view="pandadoc-growth-playbook">
