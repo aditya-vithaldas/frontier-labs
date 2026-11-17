@@ -4,15 +4,38 @@
 <meta charset="utf-8">
 <link rel="icon" type="image/png" href="../assets/logo/favicon-64.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Customer, Context, Intelligence: Where CRM Goes Next · Frontier Labs</title>
-<meta name="description" content="Workflows are now easy to rebuild. CRMs that only move records risk becoming dumb pipes.">
+<title>The Changing Face of CRM · Frontier Labs</title>
+<meta name="description" content="How workflows and intelligence are replicable, but here's what isn't.">
 <link rel="canonical" href="https://frontier-labs.app/crm-customer-context-intelligence/">
-<meta property="og:type" content="article"><meta property="og:site_name" content="Frontier Labs"><meta property="og:title" content="Customer, Context, Intelligence: Where CRM Goes Next · Frontier Labs"><meta property="og:description" content="Workflows are now easy to rebuild. CRMs that only move records risk becoming dumb pipes."><meta property="og:url" content="https://frontier-labs.app/crm-customer-context-intelligence/"><meta property="og:image" content="https://frontier-labs.app/assets/hero/storm-poster.jpg">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Frontier Labs"><meta property="og:title" content="The Changing Face of CRM · Frontier Labs"><meta property="og:description" content="How workflows and intelligence are replicable, but here's what isn't."><meta property="og:url" content="https://frontier-labs.app/crm-customer-context-intelligence/"><meta property="og:image" content="https://frontier-labs.app/assets/hero/storm-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Customer, Context, Intelligence: Where CRM Goes Next", "description": "Workflows are now easy to rebuild. CRMs that only move records risk becoming dumb pipes.", "author": {"@id": "https://frontier-labs.app/about/#aditya"}, "publisher": {"@id": "https://frontier-labs.app/about/#aditya"}, "mainEntityOfPage": "https://frontier-labs.app/crm-customer-context-intelligence/", "about": "Research article (not client work)"}, {"@type": "Person", "@id": "https://frontier-labs.app/about/#aditya", "name": "Aditya Vithaldas", "url": "https://frontier-labs.app/about/", "jobTitle": "Product, analytics and engineering leader", "homeLocation": {"@type": "Place", "name": "Berlin, Germany"}, "sameAs": ["https://decisionaxis.co/", "https://decisionaxis.substack.com/", "https://maven.com/p/0bbc6d", "https://github.com/aditya-vithaldas"]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Frontier Labs", "item": "https://frontier-labs.app/"}, {"@type": "ListItem", "position": 2, "name": "Customer, Context, Intelligence: Where CRM Goes Next", "item": "https://frontier-labs.app/crm-customer-context-intelligence/"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "The Changing Face of CRM", "description": "How workflows and intelligence are replicable, but here's what isn't.", "author": {"@id": "https://frontier-labs.app/about/#aditya"}, "publisher": {"@id": "https://frontier-labs.app/about/#aditya"}, "mainEntityOfPage": "https://frontier-labs.app/crm-customer-context-intelligence/", "about": "Research article (not client work)"}, {"@type": "Person", "@id": "https://frontier-labs.app/about/#aditya", "name": "Aditya Vithaldas", "url": "https://frontier-labs.app/about/", "jobTitle": "Product, analytics and engineering leader", "homeLocation": {"@type": "Place", "name": "Berlin, Germany"}, "sameAs": ["https://decisionaxis.co/", "https://decisionaxis.substack.com/", "https://maven.com/p/0bbc6d", "https://github.com/aditya-vithaldas"]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Frontier Labs", "item": "https://frontier-labs.app/"}, {"@type": "ListItem", "position": 2, "name": "The Changing Face of CRM", "item": "https://frontier-labs.app/crm-customer-context-intelligence/"}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
+.art-page .case-head h1{max-width:22ch}
+.byline{margin:16px 0 0;font-size:15px;color:var(--muted)}.byline a{color:var(--ink)}
+.prose{max-width:760px;font-size:18px;line-height:1.7;color:var(--ink);margin-top:28px}
+.prose h2{font-family:var(--disp);font-weight:500;font-size:clamp(26px,2.4vw,32px);line-height:1.2;letter-spacing:-.015em;margin:48px 0 12px;text-transform:none;color:var(--ink)}
+.prose h3{font-family:var(--disp);font-weight:600;font-size:21px;margin:30px 0 8px}
+.prose p{margin:0 0 16px}.prose ul,.prose ol{margin:0 0 18px;padding-left:24px}.prose li{margin:0 0 8px}
+.prose a{color:var(--accent)}
+.prose code{font-size:.86em;background:#eef1f3;border-radius:5px;padding:1px 5px;word-break:break-word}
+.prose .kicker{margin:44px 0 -2px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.prose .kicker+h2{margin-top:6px}
+.prose .lbl{margin:18px 0 6px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.prose .narr{font-family:var(--disp);font-size:20px;line-height:1.6;color:#2a3150;border-left:3px solid var(--yellow);padding-left:16px}
+.prose .sub{font-size:20px;color:var(--muted)}
+.prose figure{margin:24px 0 28px}.prose figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff;display:block}
+.prose figure.diagram img{border:0;background:transparent}
+.prose figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.prose .tbl{overflow-x:auto;margin:0 0 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.prose th,.prose td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+.prose th{background:#f3f5f7;font-weight:600}
+.prose tr:last-child td{border-bottom:0}
+.prose blockquote{margin:0 0 18px;padding-left:16px;border-left:3px solid var(--line);color:var(--muted)}
+
 .all-builds{display:grid!important;grid-template-columns:1fr 1fr;gap:40px!important;margin:48px 0 0;padding:28px 0 0!important;border-top:1px solid var(--line)}
 @media(max-width:800px){.all-builds{grid-template-columns:1fr}}
 .featured{margin-top:56px}
@@ -223,25 +246,43 @@ footer .wrap{display:flex;flex-direction:column;gap:18px}
   <nav class="links" aria-label="Verticals"><a href="../#ecommerce">E-commerce</a><a href="../#crm">CRM</a><a class="contact" href="mailto:aditya@distantos.me?subject=Inquiry%20about%20Frontier%20Labs">Contact us</a></nav>
 </div></header>
 <main>
-<section class="view case" data-view="crm-customer-context-intelligence">
+<section class="view case art-page">
   <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
   <div class="wrap case-head">
-    <a class="back" href="../#crm">← CRM</a>
-    <div class="case-meta"><span>CRM · Experiment C-01</span><span>Essay</span><time>13 Nov 2026</time></div>
-    <h1>Customer, Context, Intelligence: Where CRM Goes Next</h1>
-    <p class="dek">Workflows are now easy to rebuild. CRMs that only move records risk becoming dumb pipes.</p>
+    <a class="back" href="../#crm">← Frontier Labs</a>
+    <div class="case-meta"><span>CRM</span><span>Article</span><time>13 Nov 2026</time></div>
+    <h1>The Changing Face of CRM</h1>
+    <p class="dek">How workflows and intelligence are replicable, but here's what isn't.</p>
+    <p class="byline">By <a href="../about/">Aditya Vithaldas</a></p>
   </div>
   <div class="wrap case-body">
-    <p class="evidence"><strong>What this is:</strong> independent research and a product concept from Frontier Labs. It is not client work, and it is not endorsed by any company it discusses.</p>
-    <div class="block"><h2>The question</h2><p class="lead">If anyone can rebuild CRM workflows in a weekend, what is left to compete on?</p></div>
-    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>Customer</h3><p>The customer starts well before they are in your system: one-to-one with known contacts, one-to-many in communities and channels, many-to-many through partners and creators.</p></div><div class="ex"><h3>Context</h3><p>Matching a need to a product is stage one. The harder problems are intent (knowing when someone is actually looking) and reach (getting to them at all).</p></div><div class="ex"><h3>Channel</h3><p>Email is polluted, social is noisy, and attention is the scarce currency. Increasingly the audience on the other end is an agent doing the evaluation.</p></div></div></div>
-    <div class="block"><h2>What we found</h2><ul class="finds"><li>Workflow is no longer a moat. Acquisition before a lead exists, and outreach that earns attention, are harder and more defensible.</li><li>Every company needs to be a trusted voice that its customers' agents can understand and choose.</li><li>The open question: who becomes the Truecaller of the CRM era, telling you who is real, who is legitimate and who is worth your time?</li><li>Pricing is likely to move from seats and tasks to outcomes.</li></ul></div>
-    <div class="block"><h2>What's next</h2><ul class="next"><li>Part two: context and intelligence, and how to build something that can't be vibe-coded in a weekend.</li></ul></div>
-    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p></div>
-    <a class="back bottom" href="../#crm">← All CRM experiments</a>
+    <p class="evidence"><strong>What this is:</strong> independent research from Frontier Labs, not client work. Part one of an essay series.</p>
+    <article class="prose">
+<p>You must have seen the wave of people on X and online saying, "I could rebuild my CRM in a weekend." Clearly that's an exaggeration, but there is some truth to it: the workflow dimension of CRM is a lot more replicable than it used to be.</p>
+<p>And if you noticed, last week HubSpot co-founder Brian Halligan <a href="https://x.com/bhalligan/status/2120869421485003061">came back as CEO</a> and announced that he and Dharmesh Shah are re-founding the company as the "Customer Harness Company." They can see it too: with the workflow part replicable, they need to give something more.</p>
+<p>There's one more pattern. A huge number of startups are moving in the direction of social media listening and social media outreach, beyond the scope of what is traditionally CRM. One interesting example comes from Dan Koe, one of the most popular posters on X, who talks about reaching his audience using <a href="https://eden.so/">Eden</a>, a tool he conceptualised and uses successfully. In his words, it's "everything I learned, built into the tool I wish I had when I started."</p>
+<p>So what does this mean for CRM? Go back to the 2024–25 wave. CRM meant drip campaigns and optimising how and where best to reach a customer. Then, with LLMs coming to the fore, it evolved into automated proposal building and automated responses, which you could use in HubSpot, Salesforce and the other typical tools. Anthropic's sales leaders, for example, talk about how <a href="https://claude.com/blog/how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book">Claude already does a significant amount of the grunt work</a> on their proposals. Is that CRM? Maybe so, but augmenting creation is also a huge lever.</p>
+<h2>MCP and CRM as a source of record</h2>
+<p>So where do we stand at the end of 2026, and what can companies compete on? MCPs are pretty much a must-have for every SaaS operation, and a CRM is no different. Customers being able to trigger actions through whatever agents they use, and drive outcomes, is a necessity. But does that also risk turning these firms into a dumb pipe?</p>
+<p>If what a customer wants is predominantly workflow they configure, can they not do it themselves? And if they do, they may build their own set of skills that bypass any AI features the CRM offers. So clearly that cannot be it. It isn't just about configuration and flexibility; it is about a lot more. What is that lot more? Let's zoom out and step back into the overall CRM workflow.</p>
+<h2>Acquisition</h2>
+<p>Start with customer acquisition. Traditionally, the CRM's entry point was a contact or a lead. Can the CRM do more? If there's one thing existing customer workflows cannot do, it's reaching a customer base that doesn't yet exist in your system. Is there a role there? This is where an interesting set of people are innovating. Context.dev, for example, <a href="https://x.com/mynameisyahia/status/2113734310473966001">pitches its people search API</a> as "1 billion people, one API", letting you reach anybody and target on any topic. And Dan Koe's Eden lets you go after groups and find posts, whether on X, Facebook or Reddit, that become a huge source of potential customers, even though they aren't named yet.</p>
+<p>So is outreach and action in a group also a core part of what a CRM should be? It's clearly harder, and a more defensible moat, than pure workflow, so it's definitely worth a shot. I genuinely believe that acquisition through communities and groups, and outreach to a customer even before they become a named customer in your system, becomes an essential part of the portfolio. Maybe the CRM players have already built some of it, but it is now absolutely essential to get going.</p>
+<h2>Channel</h2>
+<p>Now you have the contact. Second, we get to channel. Sure, you know the customer, but how do you actually reach them? If you find it so easy to reach out to a million customers, surely the entire world can do that too. So what does that mean for the future of customer outreach?</p>
+<p>Start with email. There have been murmurs of users claiming that email is dead, Dan Shipper's post among them. Is it really dead? All of us have observed more spam coming through our inboxes, and while email is still largely dependable for most customers, it's obvious it is going to get heavily polluted over the coming months. Email has always been the holy grail of outreach. It may be too early to call it, but clearly email is no longer a channel where you can be assured you'll be read.</p>
+<p>In parallel, coming back to the social point above, LinkedIn and the rest are getting more and more noisy too. Attention is the new currency. How can a CRM player ensure not just that people can reach their audience, but that they can gain that audience's attention?</p>
+<p>What are the attention sources? Clearly micro-influencers start playing a larger role in the overall equation, as do people who already write to a set audience. If a commercial user is going to read only a few notes, they're likely to come from someone they already follow. Wispr Flow is a good example: Hector Serrano, their Head of Content, talked on Lenny's Podcast about working with around 50 creators.</p>
+<p>So how does a company make sure its customers are paying attention, that they're listening to it? Is it going to be about the CRM, or a lot more? Having the right hook, both directly and through channels, both at the time of purchase and on a continual basis, becomes key. Does every company become a pseudo media company? Maybe not, but at the very least every company needs to be a trusted player that won't be ignored into oblivion. That's clearly a problem to be solved.</p>
+<p>And there's another key dimension: your audience on the channel is going to be agents. They're the ones searching for decisions and for tools at a particular point in time, doing the detailed evaluation needed to make a choice a success. How do you make sure you're worthy of that? How do you make sure coding agents, ChatGPT and Claude Code are all able to make sense of choosing you when the time comes to be chosen?</p>
+<p>How can a CRM ensure that companies solve this?</p>
+<p><em>This is part one. In the next post, we'll talk about context and intelligence, and how you can go down the path of building out the entire solution: not just one that can be vibe-coded, but one that is truly sustainable, or at least more so than what exists right now, and one that's impossible for someone to just build out in the short term.</em></p>
+
+    </article>
+    <a class="back bottom" href="../">← Frontier Labs</a>
   </div>
 </section>
 </main>
-<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../services/organizational-design/">Organizational structure advisory</a><a href="../services/agent-enable-your-product/">Agent-enable your product</a><a href="../guides/product-engineering-team-structure/">Team structure guide</a><a href="../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../about/">About</a><a href="../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
+<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../services/organizational-design/">Organizational structure advisory</a><a href="../services/agent-enable-your-product/">Agent-enable your product</a><a href="../guides/product-engineering-team-structure/">Team structure guide</a><a href="../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../articles/">Articles</a><a href="../about/">About</a><a href="../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
 </body>
 </html>

@@ -13,6 +13,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
+.art-page .case-head h1{max-width:22ch}
+.byline{margin:16px 0 0;font-size:15px;color:var(--muted)}.byline a{color:var(--ink)}
+.prose{max-width:760px;font-size:18px;line-height:1.7;color:var(--ink);margin-top:28px}
+.prose h2{font-family:var(--disp);font-weight:500;font-size:clamp(26px,2.4vw,32px);line-height:1.2;letter-spacing:-.015em;margin:48px 0 12px;text-transform:none;color:var(--ink)}
+.prose h3{font-family:var(--disp);font-weight:600;font-size:21px;margin:30px 0 8px}
+.prose p{margin:0 0 16px}.prose ul,.prose ol{margin:0 0 18px;padding-left:24px}.prose li{margin:0 0 8px}
+.prose a{color:var(--accent)}
+.prose code{font-size:.86em;background:#eef1f3;border-radius:5px;padding:1px 5px;word-break:break-word}
+.prose .kicker{margin:44px 0 -2px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.prose .kicker+h2{margin-top:6px}
+.prose .lbl{margin:18px 0 6px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.prose .narr{font-family:var(--disp);font-size:20px;line-height:1.6;color:#2a3150;border-left:3px solid var(--yellow);padding-left:16px}
+.prose .sub{font-size:20px;color:var(--muted)}
+.prose figure{margin:24px 0 28px}.prose figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff;display:block}
+.prose figure.diagram img{border:0;background:transparent}
+.prose figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.prose .tbl{overflow-x:auto;margin:0 0 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.prose th,.prose td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+.prose th{background:#f3f5f7;font-weight:600}
+.prose tr:last-child td{border-bottom:0}
+.prose blockquote{margin:0 0 18px;padding-left:16px;border-left:3px solid var(--line);color:var(--muted)}
+
 .all-builds{display:grid!important;grid-template-columns:1fr 1fr;gap:40px!important;margin:48px 0 0;padding:28px 0 0!important;border-top:1px solid var(--line)}
 @media(max-width:800px){.all-builds{grid-template-columns:1fr}}
 .featured{margin-top:56px}
@@ -223,25 +246,105 @@ footer .wrap{display:flex;flex-direction:column;gap:18px}
   <nav class="links" aria-label="Verticals"><a href="../#ecommerce">E-commerce</a><a href="../#crm">CRM</a><a class="contact" href="mailto:aditya@distantos.me?subject=Inquiry%20about%20Frontier%20Labs">Contact us</a></nav>
 </div></header>
 <main>
-<section class="view case" data-view="pandadoc-growth-playbook">
+<section class="view case art-page">
   <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
   <div class="wrap case-head">
-    <a class="back" href="../#crm">← CRM</a>
-    <div class="case-meta"><span>CRM · Experiment C-03</span><span>Playbook</span><time>26 Oct 2026</time></div>
+    <a class="back" href="../#crm">← Frontier Labs</a>
+    <div class="case-meta"><span>CRM</span><span>Article</span><time>26 Oct 2026</time></div>
     <h1>Win the agent's choice, then earn the customer</h1>
     <p class="dek">How a document platform grows when the agent, not the person, picks the tool.</p>
+    <p class="byline">By <a href="../about/">Aditya Vithaldas</a></p>
   </div>
   <div class="wrap case-body">
-    <p class="evidence"><strong>What this is:</strong> independent research and a product concept from Frontier Labs. It is not client work, and it is not endorsed by any company it discusses.</p>
-    <div class="block"><h2>The question</h2><p class="lead">Customers increasingly arrive like this: someone asks for a contract, the agent picks the tool, and that tool earns the customer. How do you grow in that world?</p></div>
-    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>Lever 1: be the agent's first choice</h3><p>Agents choose by reading tool descriptions. Write them for the job (agreements, quotes, NDAs that need signing), not for the API. Metric: how often the agent picks you.</p></div><div class="ex"><h3>Lever 2: first agreements, no sign-up</h3><p>Let the first one or two agreements go out on the agent's sign-in, and offer to claim an account once they are signed.</p></div><div class="ex"><h3>Levers 3 and 4: value before asking, pocket-sized plans</h3><p>A finished draft before any form. Pay for the few agreements you need, then grow into seats.</p></div></div></div>
-    <div class="block"><h2>What we found</h2><ul class="finds"><li>The funnel now starts inside someone else's assistant. Tool descriptions are the new landing page.</li><li>Fuzzy template matching and failed sends that report success quietly lose the agent's trust.</li><li>Sign-up walls are friction an agent can't get past. Defer them.</li></ul></div>
-    <div class="block"><h2>What's next</h2><ul class="next"><li>Measure pick rate across assistants.</li><li>Pilot a no-sign-up first send.</li></ul></div>
-    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p><p class="note">An independent concept using PandaDoc as the example, not an official PandaDoc product.</p></div>
-    <a class="back bottom" href="../#crm">← All CRM experiments</a>
+    <p class="evidence"><strong>What this is:</strong> independent research from Frontier Labs, not client work. Adapted from a narrated, voice-guided concept. Independent proposal, not affiliated with or endorsed by PandaDoc.</p>
+    <article class="prose">
+<p>A growth playbook <em>· product-led, through agents</em></p>
+<h2>Win the agent’s <em>choice</em>, then earn the customer</h2>
+<p class="narr">Here’s a growth playbook for PandaDoc, for a world where agents pick the tools. When someone asks an agent for a contract, the agent decides which product does the work. So growth starts there. Four levers. Be the agent’s first choice. The first agreements, with no sign-up. Value before asking. And pocket-sized plans.</p>
+<p><strong>How customers arrive now:</strong> <em>1</em> Someone asks for a contract <em>2</em> The agent picks the tool <em>3</em> That tool earns the customer</p>
+<ul>
+<li><strong>Be the agent’s first choice</strong> Picked first when agents choose the tool. Metric: how often the agent picks PandaDoc</li>
+<li><strong>First agreements, no sign-up</strong> Send first, create the account later. Metric: first send to claimed account</li>
+<li><strong>Value before asking</strong> A finished draft before any form. Metric: time to the first finished draft</li>
+<li><strong>Pocket-sized plans</strong> Pay for the few agreements you need. Metric: packs that turn into paid seats</li>
+</ul>
+<p>Lever 1 <em>· be the agent’s first choice</em></p>
+<h2>Be the tool the agent picks</h2>
+<p class="narr">One. Be the agent’s first choice. Someone asks their agent for an NDA. The agent looks at the tools it has, and picks one. PandaDoc is already listed in ChatGPT and Claude. The next step is being picked: tool descriptions that say exactly when to use PandaDoc, and templates the agent can name, like the Confidentiality Agreement. The metric: how often the agent picks PandaDoc.</p>
+<p>The agent chooses by reading tool descriptions. PandaDoc’s are written for the API, not the job.</p>
+<p class="lbl">Today and next</p>
+<p><strong>Live today</strong></p>
+<ul>
+<li>Listed in ChatGPT and Claude, 32 tools</li>
+<li><code>documents_create</code>: “Create a document from a template, markdown content, or a PDF/DOCX file URL”</li>
+</ul>
+<p><strong>Recommended</strong></p>
+<ul>
+<li>Open <code>documents_create</code> with the job: agreements, proposals, quotes, NDAs that need signing</li>
+<li><code>templates_list</code>: say <code>q</code> is fuzzy (“NDA” has matched a safety form); confirm the match</li>
+<li>Return failed sends as errors, not as successes</li>
+</ul>
+<p><strong>Metric:</strong> <strong>How often the agent picks PandaDoc</strong></p>
+<p>Lever 2 <em>· first agreements, no sign-up</em></p>
+<h2>Send first. Create the account later.</h2>
+<p class="narr">Two: let the first one or two agreements go out from the agent account, with no sign-up. I never open PandaDoc. The first agreement goes out free.</p>
+<p>The first one or two agreements go out on the agent’s sign-in.</p>
+<p class="lbl">Today and next</p>
+<p><strong>Live today</strong></p>
+<ul>
+<li>Free plan; the ChatGPT app needs a verified email before <code>documents_send</code> works</li>
+</ul>
+<p><strong>Recommended</strong></p>
+<ul>
+<li>Allow <code>documents_send</code> for two documents on the assistant’s sign-in, verified by the signer’s link</li>
+<li>A claim link in the completion email, with the template saved to the new account</li>
+</ul>
+<p><strong>Metric:</strong> <strong>First send to account claimed</strong></p>
+<p>Lever 3 <em>· value before asking</em></p>
+<h2>A finished draft before any form</h2>
+<p class="narr">Three. Value before asking. A lot is already known before anyone fills in a form: the company, the logo, the details from the conversation. Use it to show a finished draft first, not an onboarding checklist. Then reward people for sharing more. Connect the CRM, and the next agreements fill themselves. The metric: time to the first finished draft.</p>
+<p>Use what’s already known. Then reward people for sharing more.</p>
+<p class="lbl">Today and next</p>
+<p><strong>Live today</strong></p>
+<ul>
+<li>14-day trial; markdown drafts can’t be signed (no fields, recipients become CC)</li>
+</ul>
+<p><strong>Recommended</strong></p>
+<ul>
+<li>Fill <code>Sender.Company</code> and the logo from the sign-in email domain</li>
+<li>After the first draft, offer <code>documents_link</code> to the CRM; reward it with extra free documents</li>
+</ul>
+<p><strong>Metric:</strong> <strong>Time to the first finished draft</strong></p>
+<p>Lever 4 <em>· pocket-sized plans</em></p>
+<h2>Pay for the few you need</h2>
+<p class="narr">Four. Pocket-sized plans. Today it’s a free plan, or a seat from nineteen dollars a month. But many people need a contract only now and then. Sometimes one, sometimes ten. A pack of three agreements, bought inside the agent, fits them. No subscription, and a natural step up to a seat when they need more. The metric: packs that turn into paid seats.</p>
+<p>Many people need a contract only now and then. A small pack fits them better than a seat.</p>
+<p class="lbl">Today and next</p>
+<p><strong>Live today</strong></p>
+<ul>
+<li>Free: 5 documents a month</li>
+<li>Starter from $19 a seat a month; per-document pricing only on Enterprise</li>
+</ul>
+<p><strong>Recommended</strong></p>
+<ul>
+<li>At the free limit, <code>documents_create</code> returns a pack checkout link, not a bare error</li>
+<li>Packs bought count toward the first month of a seat</li>
+</ul>
+<p><strong>Metric:</strong> <strong>Packs that turn into paid seats</strong></p>
+<p class="kicker">Putting it together</p>
+<h2>A loop, not a funnel</h2>
+<p class="narr">Together, it’s a loop. The agent picks PandaDoc. The first agreement goes out free. The value shows before the sign-up. And the price fits how often people need it. Start with a ninety-day pilot on NDAs. The goal: PandaDoc, top of mind for every agreement, and loyal over time.</p>
+<p>1 <strong>The agent picks PandaDoc</strong> Lever 1</p>
+<p>2 <strong>The first agreement goes out free</strong> Lever 2</p>
+<p>3 <strong>Value shows before the sign-up</strong> Lever 3</p>
+<p>4 <strong>The price fits how often they need it</strong> Lever 4</p>
+<p>…and next time, the agent picks PandaDoc again</p>
+<p><strong>PandaDoc, top of mind for every agreement, and loyal over time.</strong> <strong>A concept by Aditya VithaldasNot an official PandaDoc product:</strong></p>
+    </article>
+    <a class="back bottom" href="../">← Frontier Labs</a>
   </div>
 </section>
 </main>
-<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../services/organizational-design/">Organizational structure advisory</a><a href="../services/agent-enable-your-product/">Agent-enable your product</a><a href="../guides/product-engineering-team-structure/">Team structure guide</a><a href="../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../about/">About</a><a href="../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
+<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../services/organizational-design/">Organizational structure advisory</a><a href="../services/agent-enable-your-product/">Agent-enable your product</a><a href="../guides/product-engineering-team-structure/">Team structure guide</a><a href="../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../articles/">Articles</a><a href="../about/">About</a><a href="../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
 </body>
 </html>

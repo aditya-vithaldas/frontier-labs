@@ -13,6 +13,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
+.art-page .case-head h1{max-width:22ch}
+.byline{margin:16px 0 0;font-size:15px;color:var(--muted)}.byline a{color:var(--ink)}
+.prose{max-width:760px;font-size:18px;line-height:1.7;color:var(--ink);margin-top:28px}
+.prose h2{font-family:var(--disp);font-weight:500;font-size:clamp(26px,2.4vw,32px);line-height:1.2;letter-spacing:-.015em;margin:48px 0 12px;text-transform:none;color:var(--ink)}
+.prose h3{font-family:var(--disp);font-weight:600;font-size:21px;margin:30px 0 8px}
+.prose p{margin:0 0 16px}.prose ul,.prose ol{margin:0 0 18px;padding-left:24px}.prose li{margin:0 0 8px}
+.prose a{color:var(--accent)}
+.prose code{font-size:.86em;background:#eef1f3;border-radius:5px;padding:1px 5px;word-break:break-word}
+.prose .kicker{margin:44px 0 -2px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.prose .kicker+h2{margin-top:6px}
+.prose .lbl{margin:18px 0 6px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.prose .narr{font-family:var(--disp);font-size:20px;line-height:1.6;color:#2a3150;border-left:3px solid var(--yellow);padding-left:16px}
+.prose .sub{font-size:20px;color:var(--muted)}
+.prose figure{margin:24px 0 28px}.prose figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff;display:block}
+.prose figure.diagram img{border:0;background:transparent}
+.prose figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.prose .tbl{overflow-x:auto;margin:0 0 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.prose th,.prose td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+.prose th{background:#f3f5f7;font-weight:600}
+.prose tr:last-child td{border-bottom:0}
+.prose blockquote{margin:0 0 18px;padding-left:16px;border-left:3px solid var(--line);color:var(--muted)}
+
 .all-builds{display:grid!important;grid-template-columns:1fr 1fr;gap:40px!important;margin:48px 0 0;padding:28px 0 0!important;border-top:1px solid var(--line)}
 @media(max-width:800px){.all-builds{grid-template-columns:1fr}}
 .featured{margin-top:56px}
@@ -223,25 +246,148 @@ footer .wrap{display:flex;flex-direction:column;gap:18px}
   <nav class="links" aria-label="Verticals"><a href="../#ecommerce">E-commerce</a><a href="../#crm">CRM</a><a class="contact" href="mailto:aditya@distantos.me?subject=Inquiry%20about%20Frontier%20Labs">Contact us</a></nav>
 </div></header>
 <main>
-<section class="view case" data-view="agent-native-pandadoc">
+<section class="view case art-page">
   <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
   <div class="wrap case-head">
-    <a class="back" href="../#crm">← CRM</a>
-    <div class="case-meta"><span>CRM · Experiment C-02</span><span>Concept film</span><time>26 Oct 2026</time></div>
+    <a class="back" href="../#crm">← Frontier Labs</a>
+    <div class="case-meta"><span>CRM</span><span>Article</span><time>26 Oct 2026</time></div>
     <h1>Agent-native agreements</h1>
     <p class="dek">Four principles that make a document platform agent-native, each shown as one end-to-end flow with the metric to watch.</p>
+    <p class="byline">By <a href="../about/">Aditya Vithaldas</a></p>
   </div>
   <div class="wrap case-body">
-    <p class="evidence"><strong>What this is:</strong> independent research and a product concept from Frontier Labs. It is not client work, and it is not endorsed by any company it discusses.</p>
-    <div class="block"><h2>The question</h2><p class="lead">Contracts suit agents: several teams, repetitive jobs, hand-offs between sales, legal and finance, and a clear finish line in a signature. What does an agreements platform look like when people use it from their own agent?</p></div>
-    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>Access</h3><p>Ask your own agent for an NDA; it drafts over MCP, legal approves inside the chat, and it is sent and signed. Metric: requests completed end to end inside the agent.</p></div><div class="ex"><h3>Write surface</h3><p>The document renders beside the chat with fields filled and the one change from the template highlighted. Sales, legal and finance each see their own view.</p></div><div class="ex"><h3>Intelligence and proactivity</h3><p>Decisions instead of warnings: “liability is uncapped” becomes a one-click fix from the playbook, and exceptions are remembered with reason, scope and expiry. Renewals arrive drafted 30 days before a contract lapses.</p></div></div></div>
-    <div class="block"><h2>What we found</h2><ul class="finds"><li>Public reviews back three of the four principles indirectly, through workflow pain such as editing after sending and expiring contracts.</li><li>No recent reviewer asks for AI or agents by name. The loudest complaints are about billing and support, which none of the principles address.</li><li>Metered agent access would work against the access principle.</li></ul></div>
-    <div class="block"><h2>What's next</h2><ul class="next"><li>Test the write surface with a legal reviewer.</li><li>Track time-to-review and redlines per contract.</li></ul></div>
-    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p><p class="note">An independent concept using PandaDoc as the example, not an official PandaDoc product.</p></div>
-    <a class="back bottom" href="../#crm">← All CRM experiments</a>
+    <p class="evidence"><strong>What this is:</strong> independent research from Frontier Labs, not client work. Adapted from a narrated, voice-guided concept. Independent proposal, not affiliated with or endorsed by PandaDoc.</p>
+    <article class="prose">
+<p class="kicker">A proposal · four principles</p>
+<h2>What it takes to make PandaDoc <em>agent-native</em></h2>
+<p class="narr">Here’s a proposal for making PandaDoc agent-native. Contracts are a natural fit for agents: many teams, repeat work, and a clear finish line, a signature. Four principles. Access. A visual write surface. Intelligence. And proactivity. For each one: a simple case, how it could grow, and what already exists today.</p>
+<p><strong>Why contracts suit agents:</strong> <em>1</em> Many teams touch every contract <em>2</em> The same work repeats <em>3</em> A clear finish line: the signature</p>
+<ul>
+<li><strong>Access</strong> Available wherever your customers already work. Grows into: every surface, every system, every role</li>
+<li><strong>Write surface</strong> Not just text: visual, right inside the agent. Grows into: the right view for each person</li>
+<li><strong>Intelligence</strong> Brings legal’s judgement, not just warnings. Grows into: knowing what legal cares about</li>
+<li><strong>Proactivity</strong> Acts before anyone has to ask. Grows into: acting, not just alerting</li>
+</ul>
+<p>01 · Access <em>· proposed flow</em></p>
+<h2>Use PandaDoc from the agent you already use</h2>
+<p class="narr">Access. I ask my own agent for an NDA. Through PandaDoc’s MCP server, it drafts it, gets legal’s approval, and sends it for signature. I never open PandaDoc. The metric: requests completed end to end, inside the agent.</p>
+<p>Through PandaDoc’s MCP server, the agreement opens inside the conversation.</p>
+<p><strong>Metric:</strong> <strong>Requests completed end to end inside the agent</strong></p>
+<p><strong>Outcome:</strong> <strong>Request to signature in one conversation</strong></p>
+<p>01 · Access <em>· today and next</em></p>
+<h2>From a live preview to real depth</h2>
+<p class="narr">PandaDoc already has the foundation: a hosted MCP server, and apps in ChatGPT and Claude with a live document preview. What I’d add is depth. Approvals routed through the agent. The deal pulled in from the CRM, and the signed copy filed back. Roles, so sales can draft but only legal can change liability. And more surfaces: Slack, voice, and EU accounts, where the Claude connector isn’t available yet. The tech gap: approval steps and role permissions exposed as agent tools.</p>
+<p class="lbl">Technology layer</p>
+<p><strong>Live today</strong></p>
+<ul>
+<li>32 MCP tools at <code>mcp.pandadoc.com</code> (EU: <code>.eu</code>)</li>
+<li>ChatGPT app, Claude connector, and a plugin with 10 skills for Claude Code, Cursor and Gemini CLI</li>
+</ul>
+<p><strong>Gap to build</strong></p>
+<ul>
+<li>Approve and reject tools for approvers; <code>group.name</code> added to <code>selected_approvers</code></li>
+<li>Clause and field locks by role, checked on <code>documents_update</code></li>
+<li><strong>Works in ChatGPT and Claude (Live today)</strong> <em>Today:</em> Create, edit, send, remind and track with 32 tools; 10 workflow skills in the plugin</li>
+<li><strong>Approvals: routed today, approved in chat next (Partly live)</strong> <em>Today:</em> <code>documents_send</code> routes a draft into its chain; <code>templates_approval_workflow_update</code> sets one up <em>Change:</em> Approve and reject tools for the approver; fix <code>selected_approvers</code>, which fails on the missing <code>group.name</code></li>
+<li><strong>Deal in from the CRM, signed copy back (Partly live)</strong> <em>Today:</em> <code>documents_link</code> attaches a document to a HubSpot, Salesforce, Pipedrive or Dynamics record <em>Change:</em> Let <code>documents_create</code> take that record and fill <code>Client.*</code> tokens and pricing from it</li>
+<li><strong>Roles: who may change what (Recommended)</strong> <em>Today:</em> Access is chosen per user at sign-in, not per clause or field <em>Change:</em> Locks by role on <code>documents_update</code>: sales edits dates and parties, only Legal edits liability</li>
+<li><strong>More surfaces, and EU accounts (Recommended)</strong> <em>Today:</em> EU accounts add <code>mcp.pandadoc.eu</code> by hand in ChatGPT; the Claude connector is global only <em>Change:</em> One listing that routes to the right region at sign-in; the same server behind Slack and voice</li>
+</ul>
+<p>02 · Write surface <em>· proposed flow</em></p>
+<h2>Ask in words. See it on the page.</h2>
+<p class="narr">Write surface. I ask in text. The document renders right beside the chat, fields filled, and the one change highlighted. Legal sees deviations. Sales sees status. The metric: time to review a draft.</p>
+<p>Every change lands in the live document and glows, so you can check it.</p>
+<p><strong>Metric:</strong> <strong>Time to review a draft</strong></p>
+<p><strong>Outcome:</strong> <strong>Reviewed and approved without leaving the conversation</strong></p>
+<p>02 · Write surface <em>· today and next</em></p>
+<h2>From one preview to the right view for everyone</h2>
+<p class="narr">Today, the ChatGPT app shows the document inline and opens a full-screen editor. The next step is making that view work for each person. Explain what changed since the last version, in plain words. Show legal the deviations from the playbook. Show sales the blockers and the close date, and finance the payment terms. And give the other side a summary they can respond to. The tech: views that know your role, a plain-language version diff, and memory of what each person looks at.</p>
+<p class="lbl">Technology layer</p>
+<p><strong>Live today</strong></p>
+<ul>
+<li>ChatGPT widget: block editing, variable popovers, full-screen view</li>
+<li><code>documents_summary_get</code>: headline, short or detailed</li>
+</ul>
+<p><strong>Gap to build</strong></p>
+<ul>
+<li>Widget views by role, built from fields <code>documents_details_get</code> already returns</li>
+<li><code>documents_update</code> returns before → after for each change</li>
+<li>Accept or reject on AI edits, with the view each person last used</li>
+<li><strong>Inline preview and full-screen editor (Live today)</strong> <em>Today:</em> ChatGPT: edit blocks and fill variables in a modal. Claude: inline preview</li>
+<li><strong>Explains what changed (Recommended)</strong> <em>Today:</em> <code>documents_update</code> returns only a confirmation; the web assistant’s edits land with no highlight <em>Change:</em> Return a change list (block, before, after), highlighted in the widget with accept or reject</li>
+<li><strong>Legal sees deviations (Recommended)</strong> <em>Today:</em> Nothing compares a draft with the template it came from <em>Change:</em> A template diff tool: which clauses moved from the approved template, shown as a badge</li>
+<li><strong>Sales and finance see their part (Recommended)</strong> <em>Today:</em> <code>documents_details_get</code> gives everyone one view; <code>grand_total</code> has read 0 on a priced deal <em>Change:</em> Role views over existing fields: status and <code>expiration_date</code> for sales, <code>pricing.total</code> for finance</li>
+<li><strong>The other side responds (Recommended)</strong> <em>Today:</em> Recipients get an email link; summaries serve only the sender <em>Change:</em> Put the headline summary in the send and reminder emails, with replies routed back to the chat</li>
+</ul>
+<p>03 · Intelligence <em>· proposed flow</em></p>
+<h2>Decisions, not warnings</h2>
+<p class="narr">Intelligence. Instead of warning that liability is uncapped, the agent recommends a cap from your playbook and applies it in one click. When I make an exception, it remembers the reason, the scope and the expiry. The metric: fewer redlines per contract.</p>
+<p>The agent brings the playbook. You approve in one click, and it remembers why.</p>
+<p><strong>Metric:</strong> <strong>Redlines per contract</strong></p>
+<p><strong>Outcome:</strong> <strong>Fewer legal round-trips</strong></p>
+<p>03 · Intelligence <em>· today and next</em></p>
+<h2>From answers to judgement</h2>
+<p class="narr">PandaDoc’s AI can already search, summarize, and answer questions across documents. The recommendation is to go from answers to judgement. Learn which clauses legal always edits, and which drafts get signed untouched. Learn each reviewer’s red lines, and where a counterparty pushes back, with a fallback ready. Spot what’s missing, like a data processing agreement when personal data is in scope. The tech: clause-level history, playbooks learned from past deals, and memory with a scope and an expiry.</p>
+<p class="lbl">Technology layer</p>
+<p><strong>Live today</strong></p>
+<ul>
+<li><code>documents_search</code>, three summary levels, AI Assistant (beta)</li>
+<li>100+ AI-extracted fields on signed contracts</li>
+</ul>
+<p><strong>Gap to build</strong></p>
+<ul>
+<li>Clause history from template to signature</li>
+<li>Extraction on drafts, and filters on extracted values</li>
+<li>Exceptions stored with a reason, a scope and an expiry</li>
+<li><strong>Search, summarize, answer (Live today)</strong> <em>Today:</em> Full-text search, summaries, and extracted terms on completed contracts</li>
+<li><strong>Learns what legal edits (Recommended)</strong> <em>Today:</em> Extraction runs after signing; edits between template and signature aren’t kept as data <em>Change:</em> Store clause-level diffs per contract; report the most-edited clauses per template</li>
+<li><strong>Knows each reviewer (Recommended)</strong> <em>Today:</em> <code>approval_execution</code> already records who approved or rejected, with their message <em>Change:</em> Learn from those messages; pre-check a draft against each approver’s past rejections</li>
+<li><strong>Knows the counterparty (Recommended)</strong> <em>Today:</em> Metadata can’t be filtered: finding every Beta contract means full-text search, then reading each <em>Change:</em> A filter on extracted fields such as <code>Counterparty name</code>, plus what each one redlined</li>
+<li><strong>Spots what’s missing (Recommended)</strong> <em>Today:</em> Term checkboxes (audit rights, exclusivity…) appear only after signing <em>Change:</em> Run extraction on the draft and flag missing terms before sending</li>
+</ul>
+<p>04 · Proactivity <em>· proposed flow</em></p>
+<h2>Done before anyone asks</h2>
+<p class="narr">Proactivity. Thirty days before an NDA lapses, the renewal is already drafted. I review two changes, approve, and it’s signed. The metric: contracts renewed before they lapse.</p>
+<p>PandaDoc already knows when contracts lapse. The agent acts on it.</p>
+<p><strong>Metric:</strong> <strong>Contracts renewed before they lapse</strong></p>
+<p><strong>Outcome:</strong> <strong>No renewal slips through</strong></p>
+<p>Contracts ending soon · all workspaces</p>
+<p><strong>Beta Industries · NDA</strong> <strong>Beta Industries · NDA renewed</strong> 30 days ✓ 24 months</p>
+<p>Northwind · MSA 58 days</p>
+<p>Acme Corp · Order form 74 days</p>
+<p>Lumen GmbH · DPA 91 days</p>
+<p>Orbit Labs · NDA 120 days</p>
+<p>04 · Proactivity <em>· today and next</em></p>
+<h2>From alerts to action</h2>
+<p class="narr">The new contract repository already tracks renewal dates, sends alerts, and builds a daily digest of renewals and stalled deals. The gap is acting on them. Draft the renewal, not just the alert. Nudge a proposal that’s opened but never signed. Draft the order form when a deal is won. And track every obligation, not just renewals. The tech: triggers from the CRM and signatures, obligations pulled from every contract, and clear levels of approval for what the agent may do alone.</p>
+<p class="lbl">Technology layer</p>
+<p><strong>Live today</strong></p>
+<ul>
+<li>Renewal fields: action deadline, term, renewal type, opt-out</li>
+<li>Renewal alerts, AI Digest, <code>documents_reminder_send</code></li>
+</ul>
+<p><strong>Gap to build</strong></p>
+<ul>
+<li>PandaDoc webhooks and CRM stage changes passed to agents as triggers</li>
+<li>Payment, notice and delivery dates extracted, each with an owner</li>
+<li>Rules for acting alone: remind yes, send no</li>
+<li><strong>Renewal alerts and a daily digest (Live today)</strong> <em>Today:</em> Renewal terms extracted from signed contracts; alerts and a daily digest in the app</li>
+<li><strong>Draft the renewal, not just the alert (Recommended)</strong> <em>Today:</em> The alert reaches a person; the plugin’s renewal-radar skill lists renewals when asked <em>Change:</em> At the renewal action deadline minus 30 days, draft from the original template with the old terms filled</li>
+<li><strong>Nudge stalled proposals (Recommended)</strong> <em>Today:</em> <code>documents_reminder_send</code> works when asked; the follow-up skill drafts nudges on request <em>Change:</em> Trigger it from <code>documents_audit_trail_get</code>: viewed 3+ times, unsigned after 5 days</li>
+<li><strong>Paperwork when a deal is won (Recommended)</strong> <em>Today:</em> <code>documents_link</code> ties a document to a deal; nothing fires on a stage change <em>Change:</em> On “Closed won”, draft the order form from the deal; signed quotes go to invoice-handoff</li>
+<li><strong>Every obligation, not just renewals (Recommended)</strong> <em>Today:</em> Extraction covers renewals and term checkboxes, not payment or notice dates <em>Change:</em> Extract dated obligations and assign each to an owner: invoice due → Finance</li>
+</ul>
+<h2>Close</h2>
+<p class="narr">Oh, you’ve already done that. Same document. Different ways to get it done.</p>
+<p>“Oh, you’ve already done that.”</p>
+<p>Same document. Different ways to get it done.</p>
+<p>Access Write surface Intelligence Proactivity</p>
+<p>A concept by Aditya Vithaldas · Not an official PandaDoc product</p>
+    </article>
+    <a class="back bottom" href="../">← Frontier Labs</a>
   </div>
 </section>
 </main>
-<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../services/organizational-design/">Organizational structure advisory</a><a href="../services/agent-enable-your-product/">Agent-enable your product</a><a href="../guides/product-engineering-team-structure/">Team structure guide</a><a href="../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../about/">About</a><a href="../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
+<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../services/organizational-design/">Organizational structure advisory</a><a href="../services/agent-enable-your-product/">Agent-enable your product</a><a href="../guides/product-engineering-team-structure/">Team structure guide</a><a href="../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../articles/">Articles</a><a href="../about/">About</a><a href="../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
 </body>
 </html>

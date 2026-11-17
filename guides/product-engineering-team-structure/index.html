@@ -13,6 +13,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
+.art-page .case-head h1{max-width:22ch}
+.byline{margin:16px 0 0;font-size:15px;color:var(--muted)}.byline a{color:var(--ink)}
+.prose{max-width:760px;font-size:18px;line-height:1.7;color:var(--ink);margin-top:28px}
+.prose h2{font-family:var(--disp);font-weight:500;font-size:clamp(26px,2.4vw,32px);line-height:1.2;letter-spacing:-.015em;margin:48px 0 12px;text-transform:none;color:var(--ink)}
+.prose h3{font-family:var(--disp);font-weight:600;font-size:21px;margin:30px 0 8px}
+.prose p{margin:0 0 16px}.prose ul,.prose ol{margin:0 0 18px;padding-left:24px}.prose li{margin:0 0 8px}
+.prose a{color:var(--accent)}
+.prose code{font-size:.86em;background:#eef1f3;border-radius:5px;padding:1px 5px;word-break:break-word}
+.prose .kicker{margin:44px 0 -2px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.prose .kicker+h2{margin-top:6px}
+.prose .lbl{margin:18px 0 6px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.prose .narr{font-family:var(--disp);font-size:20px;line-height:1.6;color:#2a3150;border-left:3px solid var(--yellow);padding-left:16px}
+.prose .sub{font-size:20px;color:var(--muted)}
+.prose figure{margin:24px 0 28px}.prose figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff;display:block}
+.prose figure.diagram img{border:0;background:transparent}
+.prose figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.prose .tbl{overflow-x:auto;margin:0 0 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.prose th,.prose td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+.prose th{background:#f3f5f7;font-weight:600}
+.prose tr:last-child td{border-bottom:0}
+.prose blockquote{margin:0 0 18px;padding-left:16px;border-left:3px solid var(--line);color:var(--muted)}
+
 .all-builds{display:grid!important;grid-template-columns:1fr 1fr;gap:40px!important;margin:48px 0 0;padding:28px 0 0!important;border-top:1px solid var(--line)}
 @media(max-width:800px){.all-builds{grid-template-columns:1fr}}
 .featured{margin-top:56px}
@@ -265,6 +288,6 @@ footer .wrap{display:flex;flex-direction:column;gap:18px}
   </div>
 </section>
 </main>
-<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../../services/organizational-design/">Organizational structure advisory</a><a href="../../services/agent-enable-your-product/">Agent-enable your product</a><a href="../../guides/product-engineering-team-structure/">Team structure guide</a><a href="../../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../../about/">About</a><a href="../../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
+<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../../services/organizational-design/">Organizational structure advisory</a><a href="../../services/agent-enable-your-product/">Agent-enable your product</a><a href="../../guides/product-engineering-team-structure/">Team structure guide</a><a href="../../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../../articles/">Articles</a><a href="../../about/">About</a><a href="../../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
 </body>
 </html>

@@ -13,6 +13,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
+.art-page .case-head h1{max-width:22ch}
+.byline{margin:16px 0 0;font-size:15px;color:var(--muted)}.byline a{color:var(--ink)}
+.prose{max-width:760px;font-size:18px;line-height:1.7;color:var(--ink);margin-top:28px}
+.prose h2{font-family:var(--disp);font-weight:500;font-size:clamp(26px,2.4vw,32px);line-height:1.2;letter-spacing:-.015em;margin:48px 0 12px;text-transform:none;color:var(--ink)}
+.prose h3{font-family:var(--disp);font-weight:600;font-size:21px;margin:30px 0 8px}
+.prose p{margin:0 0 16px}.prose ul,.prose ol{margin:0 0 18px;padding-left:24px}.prose li{margin:0 0 8px}
+.prose a{color:var(--accent)}
+.prose code{font-size:.86em;background:#eef1f3;border-radius:5px;padding:1px 5px;word-break:break-word}
+.prose .kicker{margin:44px 0 -2px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.prose .kicker+h2{margin-top:6px}
+.prose .lbl{margin:18px 0 6px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.prose .narr{font-family:var(--disp);font-size:20px;line-height:1.6;color:#2a3150;border-left:3px solid var(--yellow);padding-left:16px}
+.prose .sub{font-size:20px;color:var(--muted)}
+.prose figure{margin:24px 0 28px}.prose figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff;display:block}
+.prose figure.diagram img{border:0;background:transparent}
+.prose figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.prose .tbl{overflow-x:auto;margin:0 0 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.prose th,.prose td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+.prose th{background:#f3f5f7;font-weight:600}
+.prose tr:last-child td{border-bottom:0}
+.prose blockquote{margin:0 0 18px;padding-left:16px;border-left:3px solid var(--line);color:var(--muted)}
+
 .all-builds{display:grid!important;grid-template-columns:1fr 1fr;gap:40px!important;margin:48px 0 0;padding:28px 0 0!important;border-top:1px solid var(--line)}
 @media(max-width:800px){.all-builds{grid-template-columns:1fr}}
 .featured{margin-top:56px}
@@ -223,25 +246,103 @@ footer .wrap{display:flex;flex-direction:column;gap:18px}
   <nav class="links" aria-label="Verticals"><a href="../#ecommerce">E-commerce</a><a href="../#crm">CRM</a><a class="contact" href="mailto:aditya@distantos.me?subject=Inquiry%20about%20Frontier%20Labs">Contact us</a></nav>
 </div></header>
 <main>
-<section class="view case" data-view="vestiaire-voice-rail">
+<section class="view case art-page">
   <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
   <div class="wrap case-head">
-    <a class="back" href="../#ecommerce">← E-commerce</a>
-    <div class="case-meta"><span>E-commerce · Experiment E-02</span><span>Prototype</span><time>13 Nov 2026</time></div>
+    <a class="back" href="../#ecommerce">← Frontier Labs</a>
+    <div class="case-meta"><span>E-commerce</span><span>Article</span><time>13 Nov 2026</time></div>
     <h1>Voice rail for pre-owned luxury</h1>
     <p class="dek">Browse 120 real pre-owned jackets by talking. Ten taps of filtering become one sentence.</p>
+    <p class="byline">By <a href="../about/">Aditya Vithaldas</a></p>
   </div>
   <div class="wrap case-body">
-    <p class="evidence"><strong>What this is:</strong> independent research and a product concept from Frontier Labs. It is not client work, and it is not endorsed by any company it discusses.</p>
-    <div class="block"><h2>The question</h2><p class="lead">Pre-owned luxury is browse-heavy and filter-heavy. Can voice replace faceted filtering, and keep the screen for looking at the product instead of the controls?</p></div>
-    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>The experience</h3><p>Three jackets lead and ten wait quietly behind them. Say “next” to move on, or refine without starting over: “only black”, “under 400”, “cheaper first”. Every active filter shows as a hang-tag chip.</p></div><div class="ex"><h3>One tool registry</h3><p>Nine tools cover the whole experience. Voice (Gemini Live with function calling), typing and browser agents (through WebMCP) all call the same registry, so they change the screen in exactly the same way.</p></div><div class="ex"><h3>Real catalogue</h3><p>120 real, unsold jackets, 60 men's and 60 women's, captured from Vestiaire Collective's public search on 12 November 2026 and embedded in the page.</p></div></div></div>
-    <div class="block"><h2>What we found</h2><ul class="finds"><li>Seven spoken turns take a shopper from 120 jackets to one €158 leather jacket.</li><li>Refinement, not search, is the heart of it: shoppers narrow down step by step, and the interface has to keep the state visible.</li><li>Building for voice and for agents at the same time is cheap when both go through one set of tools.</li></ul></div>
-    <div class="block"><h2>What's next</h2><ul class="next"><li>Run a live voice session and tune the prompt on real speech.</li><li>Swap the static snapshot for live search, and test a second category.</li></ul></div>
-    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p></div>
-    <a class="back bottom" href="../#ecommerce">← All E-commerce experiments</a>
+    <p class="evidence"><strong>What this is:</strong> independent research from Frontier Labs, not client work. A working prototype built on a snapshot of public listings. Not affiliated with or endorsed by Vestiaire Collective.</p>
+    <article class="prose">
+<h2>Summary</h2>
+<p>A working prototype lets a shopper browse 120 real Vestiaire Collective jackets by talking: say what you want, see three big picks, say "next" to move on, and narrow down by voice until the right jacket is on screen.</p>
+<p>It runs on Gemini Live with function calling. The same nine tools are also exposed through WebMCP, so a browser agent can drive the exact same rail a person drives by voice.</p>
+<p>The bet is that pre-owned luxury is a browse-heavy, filter-heavy experience. Voice turns ten taps of faceted filtering into one sentence like "black leather, women's, under 600", and keeps the screen for looking at jackets rather than controls.</p>
+<h2>Experience</h2>
+<p>The screen is built around one rule: three jackets lead, ten more wait quietly behind them.</p>
+<ul>
+<li><strong>Opening:</strong> the assistant greets the shopper, says 120 pre-owned jackets are on the rail, and asks what they are looking for. The three most-liked jackets show while they think.</li>
+<li><strong>Three dominant, ten in reserve:</strong> results show as three large numbered cards (photo, brand, colour and style, size, condition, price). Under them, a dimmer strip previews the next ten, numbered 4 to 13, with a count of how many more follow.</li>
+<li><strong>Next, next, next:</strong> "next" or "more" moves forward three at a time, "back" returns. The arrow keys do the same.</li>
+<li><strong>Show six:</strong> "show six" switches to six featured jackets in a 3 by 2 grid; "show three" switches back.</li>
+<li><strong>Refine:</strong> the core of the experience. "Only black", "under 400", "women's", "cheaper first", "drop the colour" each adjust the current results without starting over. Every active filter appears as a hang-tag chip that can also be tapped to remove.</li>
+<li><strong>Open and save:</strong> "tell me about number two" (or any number in the strip) opens a detail panel with seller description, size, condition and a link to the real listing. "Save it" adds it to a saved list that "show my saved ones" brings back.</li>
+<li><strong>Captions:</strong> the assistant's spoken reply is shown as the large headline; the shopper's words appear under it. A small trace in the corner shows each tool call and whether it came from Gemini Live, a WebMCP agent or the local parser.</li>
+</ul>
+<p>With no API key, a type box drives the same tools through a small keyword parser, so the whole flow can be demoed silently.</p>
+<h2>Example conversation</h2>
+<p>Seven turns take the shopper from 120 jackets to one €158 Mimi Liberté leather jacket. These are real results from the test run in offline mode; with Gemini Live the spoken wording differs but the tool calls and screen are the same.</p>
+<div class="tbl"><table>
+<tr><th>Shopper says</th><th>Tool call</th><th>On screen</th></tr>
+<tr><td>"Find me a black leather jacket"</td><td><code>search_jackets</code> (type: leather, colors: Black)</td><td>13 matches; The Frankie Shop €336, Giorgio Armani €252, Saint Laurent €837</td></tr>
+<tr><td>"Under 600"</td><td><code>refine_results</code> (max_price: 600)</td><td>12 matches</td></tr>
+<tr><td>"Next"</td><td><code>next_page</code></td><td>Jackets 4 to 6: Schott €246, Arte €158, Kapital €515</td></tr>
+<tr><td>"Only women's"</td><td><code>refine_results</code> (gender: women)</td><td>3 matches</td></tr>
+<tr><td>"Cheaper first"</td><td><code>refine_results</code> (sort: price_low)</td><td>S Oliver €40, Mimi Liberté €158, The Frankie Shop €336</td></tr>
+<tr><td>"Tell me about number two"</td><td><code>open_item</code> (position: 2)</td><td>Mimi Liberté black leather jacket, €158, size S, never worn with tag</td></tr>
+<tr><td>"Save it"</td><td><code>save_item</code></td><td>Saved list shows 1</td></tr>
+</table></div>
+<h2>Architecture</h2>
+<p>Every action goes through one registry of nine tools, so voice, typing and browser agents all change the screen the same way.</p>
+<figure class="diagram"><img src="../assets/articles/vestiaire-architecture.svg" alt="Architecture: three ways in (voice, typing, browser agent), one tool registry, rail state and screen"><figcaption>Architecture · 3 ways in, 1 tool registry</figcaption></figure>
+<p>Gemini Live and WebMCP send tool calls and get results back; the local parser only fires calls. The registry updates the rail state, and the screen redraws from it.</p>
+<ul>
+<li><strong>Gemini Live:</strong> a raw WebSocket to Google's Live API. Session setup carries the system prompt, the nine function declarations, a voice, and input and output transcription. Mic audio is downsampled in an AudioWorklet and streamed as 16 kHz PCM; the reply plays back with barge-in support.</li>
+<li><strong>WebMCP:</strong> each tool is registered with <code>navigator.modelContext.registerTool</code> using the same JSON schema and handler.</li>
+<li><strong>Single file:</strong> one HTML page with the catalog and photos embedded, no build step and no backend.</li>
+</ul>
+<h2>Tool reference</h2>
+<p>Nine tools cover the whole experience; each returns the count, the featured jackets and the active filters so the model can answer in a sentence.</p>
+<div class="tbl"><table>
+<tr><th>Tool</th><th>Shopper says</th><th>What it does</th></tr>
+<tr><td><code>search_jackets</code></td><td>"Find me a leather jacket"</td><td>New search; replaces all filters. Takes query, type, material, colors, brand, gender, size, condition, min_price, max_price, saved_only, sort</td></tr>
+<tr><td><code>refine_results</code></td><td>"Only black", "under 300", "drop the colour"</td><td>Adds or changes filters on the current results, or removes them by key</td></tr>
+<tr><td><code>next_page</code></td><td>"Next", "more"</td><td>Moves forward by the page size (3 or 6)</td></tr>
+<tr><td><code>previous_page</code></td><td>"Back"</td><td>Moves back one page</td></tr>
+<tr><td><code>set_layout</code></td><td>"Show six"</td><td>Switches between 3 and 6 featured jackets</td></tr>
+<tr><td><code>open_item</code></td><td>"Tell me about number two"</td><td>Opens the detail panel for a numbered jacket, rail or strip</td></tr>
+<tr><td><code>close_item</code></td><td>"Close", "back"</td><td>Returns to the rail</td></tr>
+<tr><td><code>save_item</code></td><td>"Save it"</td><td>Saves or unsaves a jacket; persists in the browser</td></tr>
+<tr><td><code>get_facets</code></td><td>"What else is in here?"</td><td>Styles, colours, brands, materials and price range in the current results</td></tr>
+</table></div>
+<h2>Catalog data</h2>
+<p>The rail holds 120 real, unsold jackets, 60 men's and 60 women's, pulled from Vestiaire Collective's public search on 12 Nov 2026 with German locale and euro prices.</p>
+<ul>
+<li><strong>Source:</strong> Vestiaire's search endpoint sits behind Cloudflare; a Firefox-fingerprinted client got through where a plain request and a headless browser were blocked. 240 listings were fetched and the first 60 per section kept.</li>
+<li><strong>Fields kept:</strong> brand, colours, size label, condition, price in euros, likes, seller description (trimmed to 260 characters), listing URL and the first photo.</li>
+<li><strong>Photos:</strong> resized to 420 px and embedded in the page, about 2.7 MB in total, so it runs without network access to Vestiaire.</li>
+<li><strong>Normalised by keyword rules:</strong> style (puffer, leather, fur, blazer, gilet, denim, shearling, rain, bomber, field and others; 27 fall back to plain "jacket") and material (wool 23, leather 19, down 16, cotton 16; 9 unknown). Some will be wrong because they are read from free-text descriptions.</li>
+<li><strong>Mix:</strong> Moncler is the most common brand; black is the most common colour (70 of the wider 180-item pull).</li>
+</ul>
+<h2>How to run it</h2>
+<p>Serve the folder from localhost; the microphone and WebMCP both refuse to run from a double-clicked file.</p>
+<ol>
+<li>In the vestiaire-voice folder, run <code>python3 -m http.server 8080</code>.</li>
+<li>Open http://localhost:8080 in Chrome.</li>
+<li>Click Connect voice, paste a Gemini API key from Google AI Studio and pick a voice. The default model is gemini-3.1-flash-live-preview; Find live models lists every Live model the key can use.</li>
+<li>Allow the microphone and talk. Tap the mic to mute; End voice closes the session.</li>
+<li>For WebMCP, use Chrome 146 or later with chrome://flags/#enable-webmcp-testing turned on (or the Chrome 149 origin trial). The header shows how many tools registered.</li>
+</ol>
+<p>From the browser console, <code>vestiaire.run('refine_results', {max_price: 300})</code> calls any tool directly.</p>
+<h2>Status and next steps</h2>
+<p>The whole flow works in offline mode; the live Gemini voice session is built but has not yet been run with a real API key.</p>
+<ul>
+<li>Run a live session with a Gemini key and tune the system prompt on real speech (paging, refining, numbered picks)</li>
+<li>Replace the browser-held API key with ephemeral tokens minted by a small backend before sharing the demo</li>
+<li>Swap the static snapshot for live Vestiaire search so stock and prices are current; the tool layer stays the same</li>
+<li>Improve style and material tagging, which comes from keyword rules on seller descriptions</li>
+<li>Extend beyond jackets to a second category to test how the tools generalise</li>
+</ul>
+
+    </article>
+    <a class="back bottom" href="../">← Frontier Labs</a>
   </div>
 </section>
 </main>
-<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../services/organizational-design/">Organizational structure advisory</a><a href="../services/agent-enable-your-product/">Agent-enable your product</a><a href="../guides/product-engineering-team-structure/">Team structure guide</a><a href="../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../about/">About</a><a href="../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
+<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../services/organizational-design/">Organizational structure advisory</a><a href="../services/agent-enable-your-product/">Agent-enable your product</a><a href="../guides/product-engineering-team-structure/">Team structure guide</a><a href="../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../articles/">Articles</a><a href="../about/">About</a><a href="../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
 </body>
 </html>

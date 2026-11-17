@@ -13,6 +13,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
+.art-page .case-head h1{max-width:22ch}
+.byline{margin:16px 0 0;font-size:15px;color:var(--muted)}.byline a{color:var(--ink)}
+.prose{max-width:760px;font-size:18px;line-height:1.7;color:var(--ink);margin-top:28px}
+.prose h2{font-family:var(--disp);font-weight:500;font-size:clamp(26px,2.4vw,32px);line-height:1.2;letter-spacing:-.015em;margin:48px 0 12px;text-transform:none;color:var(--ink)}
+.prose h3{font-family:var(--disp);font-weight:600;font-size:21px;margin:30px 0 8px}
+.prose p{margin:0 0 16px}.prose ul,.prose ol{margin:0 0 18px;padding-left:24px}.prose li{margin:0 0 8px}
+.prose a{color:var(--accent)}
+.prose code{font-size:.86em;background:#eef1f3;border-radius:5px;padding:1px 5px;word-break:break-word}
+.prose .kicker{margin:44px 0 -2px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.prose .kicker+h2{margin-top:6px}
+.prose .lbl{margin:18px 0 6px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.prose .narr{font-family:var(--disp);font-size:20px;line-height:1.6;color:#2a3150;border-left:3px solid var(--yellow);padding-left:16px}
+.prose .sub{font-size:20px;color:var(--muted)}
+.prose figure{margin:24px 0 28px}.prose figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff;display:block}
+.prose figure.diagram img{border:0;background:transparent}
+.prose figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.prose .tbl{overflow-x:auto;margin:0 0 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.prose th,.prose td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+.prose th{background:#f3f5f7;font-weight:600}
+.prose tr:last-child td{border-bottom:0}
+.prose blockquote{margin:0 0 18px;padding-left:16px;border-left:3px solid var(--line);color:var(--muted)}
+
 .all-builds{display:grid!important;grid-template-columns:1fr 1fr;gap:40px!important;margin:48px 0 0;padding:28px 0 0!important;border-top:1px solid var(--line)}
 @media(max-width:800px){.all-builds{grid-template-columns:1fr}}
 .featured{margin-top:56px}
@@ -223,25 +246,131 @@ footer .wrap{display:flex;flex-direction:column;gap:18px}
   <nav class="links" aria-label="Verticals"><a href="../#ecommerce">E-commerce</a><a href="../#crm">CRM</a><a class="contact" href="mailto:aditya@distantos.me?subject=Inquiry%20about%20Frontier%20Labs">Contact us</a></nav>
 </div></header>
 <main>
-<section class="view case" data-view="goal-driven-seller-management">
+<section class="view case art-page">
   <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
   <div class="wrap case-head">
-    <a class="back" href="../#ecommerce">← E-commerce</a>
-    <div class="case-meta"><span>E-commerce · Experiment E-01</span><span>Concept</span><time>9 Nov 2026</time></div>
+    <a class="back" href="../#ecommerce">← Frontier Labs</a>
+    <div class="case-meta"><span>E-commerce</span><span>Article</span><time>9 Nov 2026</time></div>
     <h1>Goal-Driven Seller Management</h1>
     <p class="dek">The seller sets a goal once. Agents plan, act and report every day, and anything that moves money comes back for a yes.</p>
+    <p class="byline">By <a href="../about/">Aditya Vithaldas</a></p>
   </div>
   <div class="wrap case-body">
-    <p class="evidence"><strong>What this is:</strong> independent research and a product concept from Frontier Labs. It is not client work, and it is not endorsed by any company it discusses.</p>
-    <div class="block"><h2>The question</h2><p class="lead">Marketplace sellers juggle listings, stock, ads and pricing across tools built for clicks, not outcomes. What if the seller stated the outcome they want, and agents worked toward it?</p></div>
-    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>Architecture</h3><p>Goal-driven agents sit on top of an existing commerce platform and reach it through MCP or an app marketplace. They get tools, not database access: read, act, ask. Every action is logged.</p></div><div class="ex"><h3>What a seller really needs</h3><p>Outcomes tracked against their own targets (sales, margin, returns), simplicity (the one thing to fix today), and autonomy with a say on the big calls.</p></div><div class="ex"><h3>Four pivots</h3><p>Autonomous, goal-driven agents. A human in the loop for pricing, policy and inventory. Auto-correction of routine problems. An inventory of every action the agent has taken.</p></div></div></div>
-    <div class="block"><h2>What we found</h2><ul class="finds"><li>Seller work passes the agent-fit test: a clear, measurable goal, many repeatable actions, and a few high-value human decisions.</li><li>Three use cases carry most of the value: close the sales gap (complete attributes, fix titles for search), fill inventory gaps (pause ads on sold-out items, flag reorders), and find what else to sell (spot demand gaps, draft the new listings).</li><li>The line between agent and seller is money. The agent prepares; the seller approves anything that touches pricing or profitability.</li></ul></div>
-    <div class="block"><h2>What's next</h2><ul class="next"><li>Run the three use cases against a real seller's data.</li><li>Measure time saved and goal attainment against a control month.</li></ul></div>
-    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p></div>
-    <a class="back bottom" href="../#ecommerce">← All E-commerce experiments</a>
+    <p class="evidence"><strong>What this is:</strong> independent research from Frontier Labs, not client work. Adapted from a validation-session deck. Screens show Betsy, an illustrative marketplace with invented data.</p>
+    <article class="prose">
+<p class="kicker">The architecture</p>
+<h2>Built on Tradebyte</h2>
+<p>Agents sit on top, through MCP or an app marketplace.</p>
+<p>Decision Axis</p>
+<h3>The front end: goal-driven agents</h3>
+<p>Onboard, fix, restock, grow. Big calls go to the seller.</p>
+<p>⇅ MCP</p>
+<h3>The connector, or an app marketplace</h3>
+<p>Tools, not database access: read, act, ask. Every action logged.</p>
+<p>Tradebyte</p>
+<h3>The foundation</h3>
+<p>Inventory Sales Fulfilment</p>
+<p class="kicker">The seller</p>
+<h2>What a seller really needs</h2>
+<p>More business, and an easier life running it.</p>
+<h3>Outcomes</h3>
+<p>Sales, margin, returns. Tracked against the seller’s own targets.</p>
+<p><strong>Seller asks:</strong> “What’s stopping my articles from reaching their sales potential?”</p>
+<h3>Simplicity</h3>
+<p>No unnecessary detail. The agent handles what it can on its own.</p>
+<p><strong>Seller asks:</strong> “What’s the one thing I should fix today?”</p>
+<h3>Autonomy, with a say on the big calls</h3>
+<p>Routine work runs itself. Pricing, policy and inventory need the seller’s yes.</p>
+<p><strong>Seller says:</strong> “Run the routine work. Anything hitting pricing or profitability comes to me for sign-off.”</p>
+<h3>Why seller management suits an agent</h3>
+<p>Seller work meets all six tests for agent fit:</p>
+<ul>
+<li>A clear, measurable goal</li>
+<li>Many repeatable actions</li>
+<li>A few high-value human decisions</li>
+</ul>
+<p>The four pivots:</p>
+<ol><li>Autonomous, goal-driven agents</li><li>Human in the loop for key decisions</li><li>Auto-correction</li><li>An inventory of every action</li></ol>
+<p class="kicker">Pivot 1</p>
+<h2>Autonomous, goal-driven agents</h2>
+<p>Seller sets the goal once. Agent plans, acts and reports daily.</p>
+<p><strong>The seller’s goal:</strong> <strong>$69,000 a month · 30% margin · returns under 3%</strong></p>
+<figure><img src="../assets/articles/goal-driven/goal.jpg" alt="Owner home: $2,847 today against a $2,300 daily target; $63,600 revenue, 92% of $69,000; 31% margin; 2.1% returns." loading="lazy"><figcaption> <strong>Owner home.</strong> Progress against the seller’s own goals.</figcaption></figure>
+<p>Use case 1</p>
+<h3>Close the sales gap</h3>
+<p>“What’s stopping my articles from reaching their potential?”</p>
+<p>$63.6k of $69k. Conversion 1.6% vs 2.2% target. Attributes 78% complete.</p>
+<p><strong>Agent fixes:</strong> Material, fit, colour from photos and supplier data. Titles for search.</p>
+<p><strong>You fix:</strong> Measured dimensions, care details it can’t infer.</p>
+<p>Use case 2</p>
+<h3>Fill inventory gaps</h3>
+<p>“Which best sellers keep running out?”</p>
+<p>Best sellers sold out in M and L. 3,260 views lost, about +$3,300/month.</p>
+<p><strong>Agent fixes:</strong> Pauses ads on sold-out items, shows in-stock alternatives, flags reorder dates.</p>
+<p><strong>You fix:</strong> Reorder quantities and budget.</p>
+<p>Use case 3</p>
+<h3>Find what else to sell</h3>
+<p>“What inventory can I bring in consistently to max out my potential?”</p>
+<p>Best seller in 3 more colours: +$180/month. “Vintage tee”: 2.1K searches, few shops.</p>
+<p><strong>Agent fixes:</strong> Spots demand gaps, drafts the new listings and photo brief.</p>
+<p><strong>You fix:</strong> Decide what to stock and at what price.</p>
+<p>Screens: Betsy, an illustrative marketplace from the <em>Delightful Seller Experiences</em> series.</p>
+<p class="kicker">Pivot 2</p>
+<h2>Human in the loop for key decisions</h2>
+<p>Agent prepares. Seller approves anything that moves money.</p>
+<p><strong>Agent does:</strong> Drafts each change with its value: “3 more colours, +$180/month. We draft, you publish.”</p>
+<p><strong>Seller decides:</strong> <strong>Pricing, policy, inventory.</strong> Nothing costly runs without them.</p>
+<p><strong>Why:</strong> Control over high-value actions turns the agent into a superpower.</p>
+<p><strong>Measured by:</strong> Approval rate · upside realised · time to decide</p>
+<figure><img src="../assets/articles/goal-driven/approve.jpg" alt="Day 30 dashboard for Juniper Tees: 27 units sold, $756 in sales, up 50% on last week; smart recommendations worth +$440 a month, each with Approve and Reject buttons." loading="lazy"><figcaption> <strong>Day 30.</strong> One chart, then three recommendations worth +$440/month. One click each.</figcaption></figure>
+<p>Screens: Betsy, an illustrative marketplace from the <em>Delightful Seller Experiences</em> series.</p>
+<p class="kicker">Pivot 3</p>
+<h2>Auto -correction</h2>
+<p>Low-risk fixes happen automatically, explained afterwards.</p>
+<p><strong>Agent does:</strong> Brightens dark photos Fills missing attributes it’s sure of Adds fit notes when reviews say “runs small”</p>
+<p><strong>Seller decides:</strong> “Do it for me” or “I’ll do it”, per task</p>
+<p><strong>Why:</strong> Gaps cost sales: 41 buyers never saw 9 tees, ~$140/month</p>
+<figure><img src="../assets/articles/goal-driven/autofix.jpg" alt="Catalog Onboarding view: 24 listings live, 9 with reduced visibility, 14 photos to fix, 6 out of stock; a to-do list with Do it for me and I&#x27;ll do it buttons." loading="lazy"><figcaption> <strong>Catalog view.</strong> Biggest gaps first, fix one click away.</figcaption></figure>
+<figure><img src="../assets/articles/goal-driven/missed.jpg" alt="Weekly Betsy AI card: Missing details cost you about $140 last month, with a Fill what I can button." loading="lazy"><figcaption> <strong>Monday nudge.</strong> The cost of the gap, and one click to fill it.</figcaption></figure>
+<p>Screens: Betsy, an illustrative marketplace from the <em>Delightful Seller Experiences</em> series.</p>
+<p class="kicker">Pivot 4</p>
+<h2>An inventory of every action</h2>
+<p>Thousands of actions a month. Trust comes from a clear record.</p>
+<p><strong>Logged:</strong> Paused a sold-out item Removed 3 unverified claims Held 1 bad-address order</p>
+<p><strong>Default:</strong> Everything else waits for approval. Automations switch on one by one.</p>
+<p><strong>Measured by:</strong> Automations on · actions reversed · sellers reaching Level 3</p>
+<figure><img src="../assets/articles/goal-driven/autolog.jpg" alt="Auto-fixed (low risk): paused the Ribbed Planter, removed 3 unverified claims, held 1 order with a bad address. Everything else waits for your approval, 0 of 4 automations on." loading="lazy"><figcaption> <strong>Owner home.</strong> Fixed on its own vs. waiting for the seller.</figcaption></figure>
+<figure><img src="../assets/articles/goal-driven/latest.jpg" alt="Latest feed, newest first: searches for oversized tee up 40%, a review saying runs a bit small, auto-brightened 2 photos on Cactus Club Tee, 3 buyers filtered by Fit and missed you." loading="lazy"><figcaption> <strong>Latest.</strong> Market signals and agent actions, one feed.</figcaption></figure>
+<p>Some actions need no question. Do them, then explain.</p>
+<p>The principle, from <em>A Chatbot is not your Agentic Strategy</em></p>
+<p>Screens: Betsy, an illustrative marketplace from the <em>Delightful Seller Experiences</em> series.</p>
+<p class="kicker">Case study</p>
+<h2>One seller, two moments</h2>
+<p>Sam runs Juniper Tees, a small T-shirt label, on a marketplace.</p>
+<p>Illustrative · not yet built</p>
+<h3>Bringing in inventory</h3>
+<p>Day 1 · Onboarding</p>
+<p><strong>Sam:</strong> Here’s my catalog: 120 tees and a folder of photos. Get me live?</p>
+<p>✦ Live by Thursday. Here’s the plan.</p>
+<p><strong>Good:</strong> 102 listings ready. Strong flat-lay photos, keep the style.</p>
+<p><strong>Weak:</strong> 18 listings miss Fit and Material, so filters hide them. 9 photos too dark.</p>
+<p><strong>I’ll do:</strong> Fill 14 of 18 gaps, brighten photos, add size charts.</p>
+<p><strong>Your call:</strong> Launch prices for 12 tees. Returns policy. Approve prices Review</p>
+<h3>No sales yet</h3>
+<p>Week 3 · Growth</p>
+<p><strong>Sam:</strong> Three weeks in. Why am I not selling?</p>
+<p>✦ Nothing’s broken. Here’s the picture.</p>
+<p>Low season</p>
+<p>Tee searches −22% this month. Gifting peak from mid-November.</p>
+<p>Low Sam, now High · mid-Nov</p>
+<p><strong>In the loop:</strong> Re-titled 6 tees for “vintage tee”. Brightened 14 photos. Filled Fit on 9.</p>
+<p><strong>You ought to:</strong> Add 3 colours to Retro Sunset Tee (+$180/mo). Join the Winter Gift Guide.</p>
+<p><strong>Your call:</strong> 10% launch discount for two weeks? Approve Not now</p>
+    </article>
+    <a class="back bottom" href="../">← Frontier Labs</a>
   </div>
 </section>
 </main>
-<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../services/organizational-design/">Organizational structure advisory</a><a href="../services/agent-enable-your-product/">Agent-enable your product</a><a href="../guides/product-engineering-team-structure/">Team structure guide</a><a href="../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../about/">About</a><a href="../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
+<footer><div class="wrap"><nav class="flinks" aria-label="More from Frontier Labs"><a href="../services/organizational-design/">Organizational structure advisory</a><a href="../services/agent-enable-your-product/">Agent-enable your product</a><a href="../guides/product-engineering-team-structure/">Team structure guide</a><a href="../guides/mcp-chatgpt-apps-for-saas/">MCP &amp; ChatGPT apps guide</a><a href="../articles/">Articles</a><a href="../about/">About</a><a href="../privacy/">Privacy</a></nav><div class="fmeta"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></div></footer>
 </body>
 </html>
