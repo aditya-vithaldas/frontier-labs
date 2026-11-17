@@ -1,0 +1,30 @@
+# Frontier Labs crawler policy. Owner's choice: allow all crawlers.
+# Search and answer-engine crawlers and model-training crawlers are listed in
+# separate groups so either can be changed independently.
+
+# --- Search and AI answer engines (indexing and user-requested fetches) ---
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Applebot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+
+# --- Model-training crawlers (allowed by owner's choice; change to Disallow: / to opt out) ---
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+# --- Everyone else ---
+User-agent: *
+Allow: /
+
+Sitemap: https://frontier-labs.app/sitemap.xml

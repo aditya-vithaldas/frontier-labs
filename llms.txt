@@ -1,0 +1,24 @@
+# Frontier Labs
+
+> Open research and build lab for e-commerce and CRM, run by Aditya Vithaldas in Berlin. Publishes working demos (sample data, code on GitHub) and research articles. Client advisory work is delivered by Aditya through his practice, Decision Axis (https://decisionaxis.co/). Demos and articles are not client work or measured results.
+
+## Services
+- [Organizational structure advisory](https://frontier-labs.app/services/organizational-design/): team design, operating model, ownership and decision rights for product and engineering leaders.
+- [Agent-enable your product](https://frontier-labs.app/services/agent-enable-your-product/): useful agents inside existing products, plus API and MCP access so ChatGPT, Claude and other agents can use product capabilities.
+
+## Guides
+- [Product and engineering team structure: six decisions](https://frontier-labs.app/guides/product-engineering-team-structure/)
+- [MCP and ChatGPT apps for SaaS](https://frontier-labs.app/guides/mcp-chatgpt-apps-for-saas/)
+
+## About
+- [About Frontier Labs, Aditya Vithaldas and Decision Axis](https://frontier-labs.app/about/)
+
+## Working demos
+- [Talk to your data with a live analyst (Meridian)](https://frontier-labs.app/meridian/)
+- [Voice-based search and product discovery](https://frontier-labs.app/voice-shopping/)
+- [Turn shelf photos into listings with visual article detection](https://frontier-labs.app/live-selling/)
+- [Dynamic UIs based on user requests (Surface)](https://frontier-labs.app/surface/)
+- [Inline sales guidance for sellers (Betsy)](https://frontier-labs.app/betsy/)
+
+## Contact
+- Email: aditya@distantos.me
