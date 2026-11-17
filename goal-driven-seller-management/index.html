@@ -68,6 +68,29 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 .xp-go{font-size:13px;font-weight:700;color:var(--accent)}
 .xp:hover .xp-t{color:var(--accent)}
 @media (max-width:600px){.xlist{grid-template-columns:1fr}}
+
+.banner{padding:36px 0 80px}
+.banner .wrap{display:block}
+.mission-h{font-family:var(--disp);font-weight:500;font-size:clamp(32px,3.7vw,54px);line-height:1.08;letter-spacing:-.028em;margin:0 0 44px;max-width:20ch;text-wrap:balance}
+.mission-h em{font-style:italic;color:var(--accent)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:start}
+.tweet{display:block;max-width:520px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 10px 30px -18px rgba(20,26,51,.35);transition:transform .25s ease,box-shadow .25s ease}
+.tweet:hover{transform:translateY(-2px);box-shadow:0 16px 36px -18px rgba(20,26,51,.45)}
+.tweet img{display:block;width:100%;height:auto}
+.label{margin:44px 0 12px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.thesis{list-style:none;margin:0;padding:0;font-family:var(--disp);font-weight:500;font-size:clamp(15px,1.55vw,23px);line-height:1.5;letter-spacing:-.01em}
+.thesis li{white-space:nowrap}
+.thesis li+li{margin-top:8px}
+.side-col{display:flex;flex-direction:column;gap:6px}
+.art{margin:-12px -3vw 0 -1vw}
+.xlist{display:flex;flex-direction:column;gap:22px;padding:0 2px}
+.xlist h2{font-family:var(--text);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.xlist ul{list-style:none;margin:0;padding:0}
+.xp{display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:15px;line-height:1.4}
+.xp-t{font-family:var(--text);font-weight:400;font-size:15px;color:var(--ink);transition:color .2s}
+.xp time{font-size:13px;color:var(--muted);white-space:nowrap;margin:0}
+.xp:hover .xp-t{color:var(--accent)}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.thesis{font-size:19px}.thesis li{white-space:normal}.art{margin:0 -20px}}
 /* case pages */
 .case-banner{height:280px;background:var(--banner) center 30%/cover;position:relative}
 .case-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--ground) 0%,rgba(244,239,228,0) 70%)}

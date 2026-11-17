@@ -68,6 +68,29 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 .xp-go{font-size:13px;font-weight:700;color:var(--accent)}
 .xp:hover .xp-t{color:var(--accent)}
 @media (max-width:600px){.xlist{grid-template-columns:1fr}}
+
+.banner{padding:36px 0 80px}
+.banner .wrap{display:block}
+.mission-h{font-family:var(--disp);font-weight:500;font-size:clamp(32px,3.7vw,54px);line-height:1.08;letter-spacing:-.028em;margin:0 0 44px;max-width:20ch;text-wrap:balance}
+.mission-h em{font-style:italic;color:var(--accent)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:start}
+.tweet{display:block;max-width:520px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 10px 30px -18px rgba(20,26,51,.35);transition:transform .25s ease,box-shadow .25s ease}
+.tweet:hover{transform:translateY(-2px);box-shadow:0 16px 36px -18px rgba(20,26,51,.45)}
+.tweet img{display:block;width:100%;height:auto}
+.label{margin:44px 0 12px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.thesis{list-style:none;margin:0;padding:0;font-family:var(--disp);font-weight:500;font-size:clamp(15px,1.55vw,23px);line-height:1.5;letter-spacing:-.01em}
+.thesis li{white-space:nowrap}
+.thesis li+li{margin-top:8px}
+.side-col{display:flex;flex-direction:column;gap:6px}
+.art{margin:-12px -3vw 0 -1vw}
+.xlist{display:flex;flex-direction:column;gap:22px;padding:0 2px}
+.xlist h2{font-family:var(--text);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.xlist ul{list-style:none;margin:0;padding:0}
+.xp{display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:15px;line-height:1.4}
+.xp-t{font-family:var(--text);font-weight:400;font-size:15px;color:var(--ink);transition:color .2s}
+.xp time{font-size:13px;color:var(--muted);white-space:nowrap;margin:0}
+.xp:hover .xp-t{color:var(--accent)}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.thesis{font-size:19px}.thesis li{white-space:normal}.art{margin:0 -20px}}
 /* case pages */
 .case-banner{height:280px;background:var(--banner) center 30%/cover;position:relative}
 .case-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--ground) 0%,rgba(244,239,228,0) 70%)}
@@ -98,29 +121,30 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 </div></header>
 <main>
 <section class="banner" id="top" aria-label="Introduction"><div class="wrap">
-    <div class="lead-col">
-      <figure class="quote rise">
-        <blockquote>&#8220;You need a frontier team.&#8221;</blockquote>
-        <figcaption><a href="https://every.to/podcast/transcript-every-s-frontier-team">Dan Shipper, The Every Podcast</a></figcaption>
-      </figure>
-      <p class="small rise" style="animation-delay:.08s">Every industry needs its own frontier.</p>
-      <h1 class="chain rise" style="animation-delay:.14s">
-        <span>Software should be <em class="hl">vertical</em>.</span>
-        <span>Vertical should be <em class="hl">opinionated</em>.</span>
-        <span>Opinion should be steeped&nbsp;in <em class="hl">outcome&#8209;focused research</em>.</span>
-      </h1>
-      <p class="mission rise" style="animation-delay:.25s">We create frontier experiences for e&#8209;commerce and CRM that you can refer to.</p>
-    </div>
-    <div class="side-col">
-      <figure class="art" style="margin:0">
-        <video autoplay muted loop playsinline preload="auto" poster="assets/hero/storm-poster.jpg" aria-label="Acrylic painting in motion: three sailors in yellow oilskins haul a rope on a storm-tossed deck, the waves fading into the page">
-          <source src="assets/hero/storm.mp4" type="video/mp4">
-        </video>
-      </figure>
-      <nav class="xlist" aria-label="Experiments">
-        <section id="ecommerce"><h2>E-commerce</h2><ul><li><a class="xp" href="goal-driven-seller-management/"><span class="xp-t">Goal-Driven Seller Management</span><time>9 Nov 2026</time></a></li><li><a class="xp" href="vestiaire-voice-rail/"><span class="xp-t">Voice rail for pre-owned luxury</span><time>13 Nov 2026</time></a></li><li><a class="xp" href="amazon-seller-apis/"><span class="xp-t">What an agent can do with Amazon's Seller APIs</span><time>15 Nov 2026</time></a></li></ul></section>
-        <section id="crm"><h2>CRM</h2><ul><li><a class="xp" href="crm-customer-context-intelligence/"><span class="xp-t">Customer, Context, Intelligence: Where CRM Goes Next</span><time>13 Nov 2026</time></a></li><li><a class="xp" href="agent-native-pandadoc/"><span class="xp-t">Agent-native agreements</span><time>26 Oct 2026</time></a></li><li><a class="xp" href="pandadoc-growth-playbook/"><span class="xp-t">Win the agent's choice, then earn the customer</span><time>26 Oct 2026</time></a></li></ul></section>
-      </nav>
+    <h1 class="mission-h rise">We create frontier <em>experiences and workflows</em> for e&#8209;commerce and CRM that you can experiment with.</h1>
+    <div class="hero-grid">
+      <div class="lead-col">
+        <a class="tweet rise" style="animation-delay:.1s" href="https://x.com/danshipper/status/2113010761786175970" aria-label="Dan Shipper on X: every company needs a frontier team. Open the post on X.">
+          <img src="assets/dan-shipper-frontier-team.png" width="1082" height="388" alt="Post by Dan Shipper (@danshipper) on X: keeping up with AI is a full-time job. that's why every company needs a frontier team: the frontier team's job is to keep up as models change. everyone else's job is to use what they learn">
+        </a>
+        <p class="label rise" style="animation-delay:.18s">Our thesis</p>
+        <ol class="thesis rise" style="animation-delay:.22s">
+          <li>Software should be <em class="hl">vertical</em>.</li>
+          <li>Vertical software should be <em class="hl">opinionated</em>.</li>
+          <li>That opinion should be steeped in <em class="hl">outcome&#8209;focused research</em>.</li>
+        </ol>
+      </div>
+      <div class="side-col">
+        <figure class="art" style="margin:0">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/hero/storm-poster.jpg" aria-label="Acrylic painting in motion: three sailors in yellow oilskins haul a rope on a storm-tossed deck, the waves fading into the page">
+            <source src="assets/hero/storm.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <nav class="xlist" aria-label="Experiments">
+          <section id="ecommerce"><h2>E-commerce</h2><ul><li><a class="xp" href="goal-driven-seller-management/"><span class="xp-t">Goal-Driven Seller Management</span><time>9 Nov 2026</time></a></li><li><a class="xp" href="vestiaire-voice-rail/"><span class="xp-t">Voice rail for pre-owned luxury</span><time>13 Nov 2026</time></a></li><li><a class="xp" href="amazon-seller-apis/"><span class="xp-t">What an agent can do with Amazon's Seller APIs</span><time>15 Nov 2026</time></a></li></ul></section>
+          <section id="crm"><h2>CRM</h2><ul><li><a class="xp" href="crm-customer-context-intelligence/"><span class="xp-t">Customer, Context, Intelligence: Where CRM Goes Next</span><time>13 Nov 2026</time></a></li><li><a class="xp" href="agent-native-pandadoc/"><span class="xp-t">Agent-native agreements</span><time>26 Oct 2026</time></a></li><li><a class="xp" href="pandadoc-growth-playbook/"><span class="xp-t">Win the agent's choice, then earn the customer</span><time>26 Oct 2026</time></a></li></ul></section>
+        </nav>
+      </div>
     </div>
   </div></section>
 </main>
