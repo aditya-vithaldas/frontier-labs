@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Win the agent's choice, then earn the customer · Frontier Labs</title>
+<meta name="description" content="How a document platform grows when the agent, not the person, picks the tool.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<style>
+:root{--ground:#f7f9f9;--surface:#ffffff;--ink:#141a33;--muted:#4d5270;--line:#dfe3e6;--accent:#b5401b;--yellow:#f2b632;--navy:#0d1433;--navy2:#141c45;
+--disp:'Fraunces',Georgia,serif;--text:'Inter Tight',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+/* nav */
+.nav{background:var(--ground);color:var(--ink)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:26px;padding-bottom:10px}
+.brand{font-family:var(--disp);font-weight:600;font-size:22px;letter-spacing:-.02em;text-decoration:none}
+.links{display:flex;gap:28px}
+.links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted);min-height:44px;display:inline-flex;align-items:center;background:linear-gradient(currentColor,currentColor) 0 calc(50% + 12px)/0 1.5px no-repeat;transition:color .2s,background-size .25s}
+.links a:hover{color:var(--ink);background-size:100% 1.5px}
+.case-mode .nav{border-bottom:1px solid var(--line)}
+/* banner */
+.banner{background:var(--ground);color:var(--ink);padding:28px 0 72px;overflow:hidden}
+.banner .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:32px;align-items:center}
+.art{position:relative;aspect-ratio:1280/760;margin-right:-4vw}
+.art video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:darken}
+.small{font-family:var(--disp);font-style:italic;font-size:clamp(18px,1.6vw,23px);color:var(--muted);margin:0 0 18px}
+.chain{font-family:var(--disp);font-weight:500;font-size:clamp(28px,2.9vw,44px);line-height:1.14;letter-spacing:-.025em;margin:0}
+.chain span{display:block}
+.chain span+span{margin-top:.22em}
+.mission{display:inline-block;margin:34px 0 0;padding:14px 20px;border:1.5px solid var(--line);border-radius:12px;font-size:17px;line-height:1.5;color:var(--muted);max-width:520px;background:var(--surface)}
+.hl{white-space:nowrap;font-style:italic;color:var(--ink);background:var(--yellow);padding:0 .14em .02em;border-radius:.16em .45em .2em .38em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+/* what we do */
+.what{padding:96px 0 40px}
+.what p{font-family:var(--disp);font-size:clamp(26px,2.6vw,36px);line-height:1.3;letter-spacing:-.01em;margin:0;max-width:900px}
+.verts{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:56px;padding:72px 0 96px;border-top:1px solid var(--line)}
+.vert h2{font-family:var(--disp);font-weight:500;font-size:clamp(40px,4vw,56px);line-height:1;letter-spacing:-.03em;margin:0}
+.vert .sub{margin:14px 0 26px;color:var(--muted);font-size:19px;max-width:460px}
+.vert ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+._oldxp{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"id t date" ". go go";gap:4px 16px;padding:18px 4px;border-bottom:1px solid var(--line);text-decoration:none;align-items:baseline;min-height:44px}
+.xp:hover .xp-t{color:var(--accent)}
+.xp-id{grid-area:id;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--accent)}
+.xp-t{grid-area:t;font-family:var(--disp);font-weight:600;font-size:21px;line-height:1.25;transition:color .2s}
+.xp time{grid-area:date;font-size:14px;color:var(--muted);white-space:nowrap}
+.xp-go{grid-area:go;font-size:15px;font-weight:700;color:var(--accent)}
+.inspired{border-top:1px solid var(--line);padding:56px 0 96px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:40px;align-items:start}
+.inspired .label{font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:8px 0 0}
+footer{border-top:1px solid var(--line);padding:32px 0 44px;font-size:15px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+
+.banner .wrap{align-items:start}
+.lead-col{padding-top:24px}
+.quote{margin:0 0 30px}
+.quote blockquote{margin:0;font-family:var(--disp);font-style:italic;font-weight:500;font-size:clamp(26px,2.4vw,34px);line-height:1.15;color:var(--accent)}
+.quote figcaption{margin-top:8px;font-size:14px;font-weight:600;letter-spacing:.04em}
+.quote figcaption a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+.quote figcaption a:hover{color:var(--ink)}
+.side-col{display:flex;flex-direction:column;gap:8px}
+.xlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:0 4px}
+.xlist h2{font-family:var(--disp);font-weight:600;font-size:22px;margin:0 0 6px;letter-spacing:-.01em}
+.xlist ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.xp{display:block;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.xp-t{display:block;font-family:var(--disp);font-weight:600;font-size:17px;line-height:1.3;transition:color .2s}
+.xp time{font-size:13px;color:var(--muted);margin-right:10px}
+.xp-go{font-size:13px;font-weight:700;color:var(--accent)}
+.xp:hover .xp-t{color:var(--accent)}
+@media (max-width:600px){.xlist{grid-template-columns:1fr}}
+/* case pages */
+.case-banner{height:280px;background:var(--banner) center 30%/cover;position:relative}
+.case-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--ground) 0%,rgba(244,239,228,0) 70%)}
+.case-head{margin-top:-90px;position:relative;max-width:964px}
+.back{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--accent);text-decoration:none}
+.back:hover{text-decoration:underline;text-underline-offset:4px}
+.case-meta{display:flex;flex-wrap:wrap;gap:8px 16px;margin:18px 0 0;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.case-meta span:first-child{color:var(--accent)}
+.case h1{font-family:var(--disp);font-weight:500;font-size:clamp(40px,5vw,72px);line-height:1.02;letter-spacing:-.03em;margin:14px 0 0;max-width:16ch}
+.dek{font-family:var(--disp);font-size:clamp(21px,2vw,27px);line-height:1.4;color:var(--muted);margin:22px 0 0;max-width:740px}
+.case-body{padding-top:60px;padding-bottom:120px;max-width:964px}
+.block{padding:36px 0;border-top:1px solid var(--line)}
+.block h2{font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+.lead{font-family:var(--disp);font-size:25px;line-height:1.45;margin:0}
+.exs{display:grid;gap:26px}.ex h3{font-family:var(--disp);font-weight:600;font-size:23px;margin:0 0 6px}.ex p{margin:0;color:var(--muted)}
+.finds,.next{margin:0;padding-left:22px;display:grid;gap:12px}.finds li::marker{color:var(--accent)}
+.free p{margin:0}.note{margin-top:14px!important;font-size:15px;color:var(--muted)}.back.bottom{margin-top:28px}
+.rise{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.banner .wrap{grid-template-columns:1fr;gap:24px}.art{order:-1;margin:0 -20px}.inspired{grid-template-columns:1fr}.verts{grid-template-columns:1fr}}
+@media (max-width:600px){.wrap{padding:0 20px}.brand{font-size:20px}.links{gap:18px}.links a{font-size:14px}.xp{grid-template-columns:auto 1fr;grid-template-areas:"id date" "t t" "go go"}.what{padding-top:64px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+:root{--banner:url(../assets/hero/banner.jpg)}</style>
+</head>
+<body class="case-mode">
+<header class="nav"><div class="wrap">
+  <a class="brand" href="../">Frontier Labs</a>
+  <nav class="links" aria-label="Verticals"><a href="../#ecommerce">E-commerce</a><a href="../#crm">CRM</a></nav>
+</div></header>
+<main>
+<section class="view case" data-view="pandadoc-growth-playbook">
+  <div class="case-banner" role="img" aria-label="Detail of the storm painting"></div>
+  <div class="wrap case-head">
+    <a class="back" href="../#crm">← CRM</a>
+    <div class="case-meta"><span>CRM · Experiment C-03</span><span>Playbook</span><time>26 Oct 2026</time></div>
+    <h1>Win the agent's choice, then earn the customer</h1>
+    <p class="dek">How a document platform grows when the agent, not the person, picks the tool.</p>
+  </div>
+  <div class="wrap case-body">
+    <div class="block"><h2>The question</h2><p class="lead">Customers increasingly arrive like this: someone asks for a contract, the agent picks the tool, and that tool earns the customer. How do you grow in that world?</p></div>
+    <div class="block"><h2>What we explored</h2><div class="exs"><div class="ex"><h3>Lever 1: be the agent's first choice</h3><p>Agents choose by reading tool descriptions. Write them for the job (agreements, quotes, NDAs that need signing), not for the API. Metric: how often the agent picks you.</p></div><div class="ex"><h3>Lever 2: first agreements, no sign-up</h3><p>Let the first one or two agreements go out on the agent's sign-in, and offer to claim an account once they are signed.</p></div><div class="ex"><h3>Levers 3 and 4: value before asking, pocket-sized plans</h3><p>A finished draft before any form. Pay for the few agreements you need, then grow into seats.</p></div></div></div>
+    <div class="block"><h2>What we found</h2><ul class="finds"><li>The funnel now starts inside someone else's assistant. Tool descriptions are the new landing page.</li><li>Fuzzy template matching and failed sends that report success quietly lose the agent's trust.</li><li>Sign-up walls are friction an agent can't get past. Defer them.</li></ul></div>
+    <div class="block"><h2>What's next</h2><ul class="next"><li>Measure pick rate across assistants.</li><li>Pilot a no-sign-up first send.</li></ul></div>
+    <div class="block free"><h2>Free to use</h2><p>The patterns, tool designs and findings here are open. Take them, build on them, and tell us what you learn.</p><p class="note">An independent concept using PandaDoc as the example, not an official PandaDoc product.</p></div>
+    <a class="back bottom" href="../#crm">← All CRM experiments</a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>Frontier Labs · frontier-labs.app · Berlin</span><span>Experiments are independent and free to use.</span></div></footer>
+</body>
+</html>
