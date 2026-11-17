@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
+.more-btn{margin:10px 0 0;padding:0;border:0;background:none;font:500 14px var(--text);color:var(--accent);cursor:pointer;min-height:36px}
+.more-btn:hover{text-decoration:underline}
 .new{display:inline-block;margin-left:10px;padding:2px 8px;border-radius:999px;background:var(--yellow);color:var(--ink);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;vertical-align:2px}
 .articles{margin:72px 0 40px;padding-top:28px;border-top:1px solid var(--line)}
 .articles h2{font-family:var(--disp);font-weight:500;font-size:24px;letter-spacing:-.01em;margin:0 0 18px}
@@ -168,7 +170,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
           </video>
         </figure>
         <nav class="xlist" aria-label="Experiments">
-          <section id="ecommerce"><h2>E-commerce</h2><ul><li><a class="xp" href="betsy/"><span class="xp-t">Inline sales guidance for sellers<span class="new">New</span></span><time>Nov 2026</time></a></li><li><a class="xp" href="surface/"><span class="xp-t">Dynamic UIs based on user requests<span class="new">New</span></span><time>Nov 2026</time></a></li><li><a class="xp" href="meridian/"><span class="xp-t">Talk to your data with a live analyst</span><time>Sep 2026</time></a></li><li><a class="xp" href="live-selling/"><span class="xp-t">Turn your old shelf photos into listings with visual article detection</span><time>Apr 2026</time></a></li><li><a class="xp" href="voice-shopping/"><span class="xp-t">Voice-based search and product discovery with Gemini Live 3.8</span><time>Mar 2026</time></a></li></ul></section>
+          <section id="ecommerce"><h2>E-commerce</h2><ul><li><a class="xp" href="betsy/"><span class="xp-t">Inline sales guidance for sellers<span class="new">New</span></span><time>Nov 2026</time></a></li><li><a class="xp" href="surface/"><span class="xp-t">Dynamic UIs based on user requests<span class="new">New</span></span><time>Nov 2026</time></a></li><li><a class="xp" href="meridian/"><span class="xp-t">Talk to your data with a live analyst</span><time>Sep 2026</time></a></li><li class="extra" hidden><a class="xp" href="live-selling/"><span class="xp-t">Turn your old shelf photos into listings with visual article detection</span><time>Apr 2026</time></a></li><li class="extra" hidden><a class="xp" href="voice-shopping/"><span class="xp-t">Voice-based search and product discovery with Gemini Live 3.8</span><time>Mar 2026</time></a></li></ul><button class="more-btn" type="button" aria-expanded="false" onclick="this.previousElementSibling.querySelectorAll('li.extra').forEach(function(li){li.hidden=false});this.remove()">View 2 more</button><ul hidden></ul></section>
           <section id="crm"><h2>CRM</h2><ul><li><a class="xp" href="fireside-crm/"><span class="xp-t">Reach your customers higher in the funnel with social discovery<span class="new">New</span></span><time>Nov 2026</time></a></li></ul></section>
         </nav>
       </div>
